@@ -38,3 +38,6 @@ C:\Users\k\Documents\GitHub\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_
 C:\Users\k\Documents\GitHub\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\bin\Debug\net8.0-windows\MaterialDesignColors.dll
 C:\Users\k\Documents\GitHub\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\bin\Debug\net8.0-windows\MaterialDesignThemes.Wpf.dll
 C:\Users\k\Documents\GitHub\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\bin\Debug\net8.0-windows\Microsoft.Xaml.Behaviors.dll
+C:\Users\k\Documents\GitHub\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\obj\Debug\net8.0-windows\man_hinh_dang_nhap.g.cs
+C:\Users\k\Documents\GitHub\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\obj\Debug\net8.0-windows\man_hinh_dang_nhap.baml
+C:\Users\k\Documents\GitHub\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\obj\Debug\net8.0-windows\Quan_ly_tai_nguyen_rung_wpf.sourcelink.json

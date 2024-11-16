@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\k\\Documents\\GitHub\\Quan_ly_tai_nguyen_rung_wpf\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0D3240FA-7A07-48BC-95D1-4D52AFDF5B57}|Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf.csproj|c:\\users\\k\\documents\\github\\quan_ly_tai_nguyen_rung_wpf\\quan_ly_tai_nguyen_rung_wpf\\man_hinh_dang_nhap.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0D3240FA-7A07-48BC-95D1-4D52AFDF5B57}|Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf.csproj|solutionrelative:quan_ly_tai_nguyen_rung_wpf\\man_hinh_dang_nhap.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0D3240FA-7A07-48BC-95D1-4D52AFDF5B57}|Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf.csproj|c:\\users\\k\\documents\\github\\quan_ly_tai_nguyen_rung_wpf\\quan_ly_tai_nguyen_rung_wpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{0D3240FA-7A07-48BC-95D1-4D52AFDF5B57}|Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf.csproj|solutionrelative:quan_ly_tai_nguyen_rung_wpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0D3240FA-7A07-48BC-95D1-4D52AFDF5B57}|Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf.csproj|c:\\users\\k\\documents\\github\\quan_ly_tai_nguyen_rung_wpf\\quan_ly_tai_nguyen_rung_wpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0D3240FA-7A07-48BC-95D1-4D52AFDF5B57}|Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf.csproj|solutionrelative:quan_ly_tai_nguyen_rung_wpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D3240FA-7A07-48BC-95D1-4D52AFDF5B57}|Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf.csproj|c:\\users\\k\\documents\\github\\quan_ly_tai_nguyen_rung_wpf\\quan_ly_tai_nguyen_rung_wpf\\man_hinh_dang_nhap.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D3240FA-7A07-48BC-95D1-4D52AFDF5B57}|Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf.csproj|solutionrelative:quan_ly_tai_nguyen_rung_wpf\\man_hinh_dang_nhap.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0D3240FA-7A07-48BC-95D1-4D52AFDF5B57}|Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf.csproj|c:\\users\\k\\documents\\github\\quan_ly_tai_nguyen_rung_wpf\\quan_ly_tai_nguyen_rung_wpf\\appstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -22,11 +30,27 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "man_hinh_dang_nhap.xaml",
+              "DocumentMoniker": "C:\\Users\\k\\Documents\\GitHub\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf\\man_hinh_dang_nhap.xaml",
+              "RelativeDocumentMoniker": "Quan_ly_tai_nguyen_rung_wpf\\man_hinh_dang_nhap.xaml",
+              "ToolTip": "C:\\Users\\k\\Documents\\GitHub\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf\\man_hinh_dang_nhap.xaml",
+              "RelativeToolTip": "Quan_ly_tai_nguyen_rung_wpf\\man_hinh_dang_nhap.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-16T12:05:35.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\k\\Documents\\GitHub\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Quan_ly_tai_nguyen_rung_wpf\\MainWindow.xaml",
@@ -38,20 +62,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\k\\Documents\\GitHub\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Quan_ly_tai_nguyen_rung_wpf\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\k\\Documents\\GitHub\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf\\MainWindow.xaml.cs",
               "RelativeToolTip": "Quan_ly_tai_nguyen_rung_wpf\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAIYAAAAAj5mZmZkkwJQAAABfAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAYwB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-16T04:53:08.863Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
+              "Title": "man_hinh_dang_nhap.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\k\\Documents\\GitHub\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf\\man_hinh_dang_nhap.xaml.cs",
+              "RelativeDocumentMoniker": "Quan_ly_tai_nguyen_rung_wpf\\man_hinh_dang_nhap.xaml.cs",
+              "ToolTip": "C:\\Users\\k\\Documents\\GitHub\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf\\man_hinh_dang_nhap.xaml.cs",
+              "RelativeToolTip": "Quan_ly_tai_nguyen_rung_wpf\\man_hinh_dang_nhap.xaml.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAABwvccAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T12:09:26.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "AppStyles.xaml",
               "DocumentMoniker": "C:\\Users\\k\\Documents\\GitHub\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf\\AppStyles.xaml",
               "RelativeDocumentMoniker": "Quan_ly_tai_nguyen_rung_wpf\\AppStyles.xaml",
