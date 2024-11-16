@@ -144,14 +144,44 @@
                                  HorizontalContentAlignment="Left"              
                                  VerticalContentAlignment="Center"/>
                 </Border>
-                <TextBlock x:Name="chua_co_tai_khoan"
-                           Text="Chưa có tài khoản"
+                <Grid  
                            Grid.Row="6" 
                            Grid.RowSpan="1" 
                            Grid.Column="1" 
                            Grid.ColumnSpan="6"
-                           HorizontalAlignment="Right"
-                           FontSize="16"></TextBlock>
+                           
+                           >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    
+                    <TextBlock Grid.Row="0" 
+                               x:Name="chua_co_tai_khoan"
+                               HorizontalAlignment="Right"
+                               VerticalAlignment="Center"
+                                Grid.RowSpan="1" 
+                                Grid.Column="1" 
+                                Grid.ColumnSpan="1"
+                                Text="Chưa có tài khoản?"
+                                FontSize="16" 
+                                MouseLeftButtonDown="Chua_co_tai_khoan" 
+                                MouseEnter="Chua_co_tai_khoan_enter" 
+                                MouseLeave="Chua_co_tai_khoan_leave"></TextBlock>
+                    <TextBlock Grid.Row="0" 
+                               x:Name="quen_mat_khau"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                                Grid.RowSpan="1" 
+                                Grid.Column="0" 
+                                Grid.ColumnSpan="1"
+                                Text="Quên mật khẩu?"
+                                FontSize="16" 
+                               MouseLeftButtonDown="Quen_mat_khau" 
+                               MouseEnter="Quen_mat_khau_enter" 
+                               MouseLeave="Quen_mat_khau_leave" 
+                                ></TextBlock>
+                </Grid>
                 <Border CornerRadius="20"
                         x:Name="button1_trang"
                         Grid.Row="8" 

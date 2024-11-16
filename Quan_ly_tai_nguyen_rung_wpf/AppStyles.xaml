@@ -5,7 +5,7 @@
         <Style.Setters>
             <Setter Property="Effect">
                 <Setter.Value>
-                    <DropShadowEffect Color="White" Direction="135" ShadowDepth="6" BlurRadius="10" Opacity="0.9"/>
+                    <DropShadowEffect Color="White" Direction="135" ShadowDepth="6" BlurRadius="10" Opacity="0.8"/>
                 </Setter.Value>
             </Setter>
         </Style.Setters>

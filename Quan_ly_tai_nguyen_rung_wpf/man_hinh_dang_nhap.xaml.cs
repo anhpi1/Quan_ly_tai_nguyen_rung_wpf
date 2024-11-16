@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.PortableExecutable;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -14,6 +15,7 @@ using System.Windows.Media.Effects;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MySql.Data.MySqlClient;
+using static MaterialDesignThemes.Wpf.Theme;
 
 namespace Quan_ly_tai_nguyen_rung_wpf
 {
@@ -67,7 +69,7 @@ namespace Quan_ly_tai_nguyen_rung_wpf
             // Tạo animation tăng dần opacity
             var opacityAnimation_white = new DoubleAnimation
             {
-                From = 0.9,
+                From = 0.8,
                 To = 0, // Độ trong suốt tối đa
                 Duration = TimeSpan.FromSeconds(0.3),
                 EasingFunction = new QuadraticEase()
@@ -118,7 +120,7 @@ namespace Quan_ly_tai_nguyen_rung_wpf
                 var opacityAnimation_white = new DoubleAnimation
                 {
                     From = shadowEffect_white.Opacity,
-                    To = 0.9, // Mất bóng dần
+                    To = 0.8, // Mất bóng dần
                     Duration = TimeSpan.FromSeconds(0.3),
                     EasingFunction = new QuadraticEase()
                 };
@@ -196,6 +198,57 @@ namespace Quan_ly_tai_nguyen_rung_wpf
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi khi kết nối cơ sở dữ liệu: " + ex.Message, "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void Chua_co_tai_khoan(object sender, MouseButtonEventArgs e)
+        {
+            
+            man_hinh_dang_ki manhinhWindow = new man_hinh_dang_ki();
+            manhinhWindow.Show();
+            this.Close();
+        }
+
+        private void Chua_co_tai_khoan_enter(object sender, MouseEventArgs e)
+        {
+            if (chua_co_tai_khoan != null)
+            {
+                // Thay đổi màu nền khi chuột di vào
+                chua_co_tai_khoan.Foreground = new SolidColorBrush(Colors.Blue);
+            }
+        }
+
+        private void Chua_co_tai_khoan_leave(object sender, MouseEventArgs e)
+        {
+            if (chua_co_tai_khoan != null)
+            {
+                // Đặt lại màu nền khi chuột rời khỏi
+                chua_co_tai_khoan.Foreground = new SolidColorBrush(Colors.Black);
+            }
+        }
+
+        private void Quen_mat_khau(object sender, MouseButtonEventArgs e)
+        {
+            man_hinh_quen_mat_khau manhinhWindow = new man_hinh_quen_mat_khau();
+            manhinhWindow.Show();
+            this.Close();
+        }
+
+        private void Quen_mat_khau_enter(object sender, MouseEventArgs e)
+        {
+            if (quen_mat_khau != null)
+            {
+                // Thay đổi màu nền khi chuột di vào
+                quen_mat_khau.Foreground = new SolidColorBrush(Colors.Blue);
+            }
+        }
+
+        private void Quen_mat_khau_leave(object sender, MouseEventArgs e)
+        {
+            if (quen_mat_khau != null)
+            {
+                // Đặt lại màu nền khi chuột rời khỏi
+                quen_mat_khau.Foreground = new SolidColorBrush(Colors.Black);
             }
         }
     }
