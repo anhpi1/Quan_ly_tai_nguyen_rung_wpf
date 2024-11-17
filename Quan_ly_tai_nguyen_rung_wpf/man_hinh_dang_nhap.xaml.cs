@@ -159,7 +159,7 @@ namespace Quan_ly_tai_nguyen_rung_wpf
             string password = pass.Password;
 
             // Chuỗi kết nối đến cơ sở dữ liệu MySQL
-            string connectionString = "Server=localhost;Database=test;Uid=root;Pwd=3102004aZ;";
+            string connectionString = "Server=localhost;Database=test;Uid=root;Pwd=123456;";
 
             try
             {

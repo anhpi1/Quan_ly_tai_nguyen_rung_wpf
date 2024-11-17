@@ -344,7 +344,7 @@ namespace Quan_ly_tai_nguyen_rung_wpf
         // Hàm kiểm tra người dùng đã tồn tại
         private bool IsUserExistsUsername(string username)
         {
-            string connectionString = "server=localhost;user=root;database=test;password=3102004aZ;";
+            string connectionString = "server=localhost;user=root;database=test;password=123456;";
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 try
@@ -367,7 +367,7 @@ namespace Quan_ly_tai_nguyen_rung_wpf
         }
         private bool IsUserExistsPhone(string phone)
         {
-            string connectionString = "server=localhost;user=root;database=test;password=3102004aZ;";
+            string connectionString = "server=localhost;user=root;database=test;password=123456;";
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 try
@@ -393,7 +393,7 @@ namespace Quan_ly_tai_nguyen_rung_wpf
         // Hàm lưu người dùng vào cơ sở dữ liệu
         private bool SaveUserToDatabase(string username, string phone, string password)
         {
-            string connectionString = "server=localhost;user=root;database=test;password=3102004aZ;";
+            string connectionString = "server=localhost;user=root;database=test;password=123456;";
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 try

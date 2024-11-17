@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\k\\Documents\\GitHub\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf.csproj": {}
+    "D:\\github\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf.csproj": {}
   },
   "projects": {
-    "C:\\Users\\k\\Documents\\GitHub\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf.csproj": {
+    "D:\\github\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\k\\Documents\\GitHub\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf.csproj",
+        "projectUniqueName": "D:\\github\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf.csproj",
         "projectName": "Quan_ly_tai_nguyen_rung_wpf",
-        "projectPath": "C:\\Users\\k\\Documents\\GitHub\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf.csproj",
-        "packagesPath": "C:\\Users\\k\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\k\\Documents\\GitHub\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf\\obj\\",
+        "projectPath": "D:\\github\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf.csproj",
+        "packagesPath": "C:\\Users\\HAH\\.nuget\\packages\\",
+        "outputPath": "D:\\github\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\k\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HAH\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,8 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files\\dotnet\\library-packs": {}
         },
         "frameworks": {
           "net8.0-windows7.0": {
@@ -62,14 +61,6 @@
             "MySql.Data": {
               "target": "Package",
               "version": "[9.1.0, )"
-            },
-            "SharpVectors.Reloaded": {
-              "target": "Package",
-              "version": "[1.8.4.2, )"
-            },
-            "Svg": {
-              "target": "Package",
-              "version": "[3.4.7, )"
             }
           },
           "imports": [

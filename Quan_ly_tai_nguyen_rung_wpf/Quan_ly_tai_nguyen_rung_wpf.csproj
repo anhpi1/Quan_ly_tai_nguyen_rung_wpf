@@ -21,8 +21,7 @@
   <ItemGroup>
     <PackageReference Include="GlmSharp" Version="0.9.8" />
     <PackageReference Include="MaterialDesignThemes" Version="5.1.0" />
-    <PackageReference Include="MySql.Data" Version="9.1.0" />    <PackageReference Include="SharpVectors.Reloaded" Version="1.8.4.2" />
-    <PackageReference Include="Svg" Version="3.4.7" />
+    <PackageReference Include="MySql.Data" Version="9.1.0" />
   </ItemGroup>
 
 </Project>
