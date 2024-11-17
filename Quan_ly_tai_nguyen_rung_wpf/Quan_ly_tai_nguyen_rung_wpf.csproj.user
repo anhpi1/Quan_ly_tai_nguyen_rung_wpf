@@ -19,6 +19,9 @@
     <Compile Update="man_hinh_quen_mat_khau.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UserControl1.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="AppStyles.xaml">
@@ -37,6 +40,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="man_hinh_quen_mat_khau.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControl1.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
