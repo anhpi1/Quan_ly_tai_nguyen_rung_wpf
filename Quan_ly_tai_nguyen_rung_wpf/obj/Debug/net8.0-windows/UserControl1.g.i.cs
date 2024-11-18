@@ -53,7 +53,7 @@ namespace Quan_ly_tai_nguyen_rung_wpf {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Quan_ly_tai_nguyen_rung_wpf;component/usercontrol1.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Quan_ly_tai_nguyen_rung_wpf;V1.0.0.0;component/usercontrol1.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\UserControl1.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -7,10 +7,13 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="man_hinh_dang_ki.xaml.cs">
+    <Compile Update="ctrl_dang_ki_1.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="man_hinh_dang_ki_thanh_cong.xaml.cs">
+    <Compile Update="ctrl_dang_ki_2.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ctrl_dang_ki_thanh_cong.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="man_hinh_dang_nhap.xaml.cs">
@@ -19,30 +22,27 @@
     <Compile Update="man_hinh_quen_mat_khau.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="UserControl1.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="AppStyles.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="ctrl_dang_ki_1.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ctrl_dang_ki_2.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ctrl_dang_ki_thanh_cong.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="man_hinh_dang_ki.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="man_hinh_dang_ki_thanh_cong.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="man_hinh_dang_nhap.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="man_hinh_quen_mat_khau.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="UserControl1.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
