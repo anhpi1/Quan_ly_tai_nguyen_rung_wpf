@@ -174,52 +174,52 @@ namespace Quan_ly_tai_nguyen_rung_wpf
             if (last_name_o != "")
             {
                 {
-                    log_last_name.Text = "Tên đăng nhập:";
+                    log_last_name.Text = "Tên:";
                     log_last_name.Foreground = new SolidColorBrush(Colors.Black);
                 }
             }
             else
             {
-                log_last_name.Text = "Tên người dùng trống.";
+                log_last_name.Text = "Tên trống.";
                 log_last_name.Foreground = new SolidColorBrush(Colors.Red); ;
             }
             if (fist_name_o != "")
             {
 
                 {
-                    log_fist_name.Text = "Tên đăng nhập:";
+                    log_fist_name.Text = "Họ:";
                     log_fist_name.Foreground = new SolidColorBrush(Colors.Black);
                 }
             }
             else
             {
-                log_fist_name.Text = "Tên người dùng trống.";
+                log_fist_name.Text = "Họ trống.";
                 log_fist_name.Foreground = new SolidColorBrush(Colors.Red); ;
             }
             if (address_o != "")
             {
 
                 {
-                    log_address.Text = "Tên đăng nhập:";
+                    log_address.Text = "Địa chỉ:";
                     log_address.Foreground = new SolidColorBrush(Colors.Black);
                 }
             }
             else
             {
-                log_address.Text = "Tên người dùng trống.";
+                log_address.Text = "Địa chỉ trống.";
                 log_address.Foreground = new SolidColorBrush(Colors.Red); ;
             }
             if (email_o != "")
             {
 
                 {
-                    log_email.Text = "Tên đăng nhập:";
+                    log_email.Text = "Email:";
                     log_email.Foreground = new SolidColorBrush(Colors.Black);
                 }
             }
             else
             {
-                log_email.Text = "Tên người dùng trống.";
+                log_email.Text = "Email trống.";
                 log_email.Foreground = new SolidColorBrush(Colors.Red); ;
             }
 

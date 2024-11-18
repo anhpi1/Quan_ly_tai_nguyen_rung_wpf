@@ -160,9 +160,14 @@ namespace Quan_ly_tai_nguyen_rung_wpf
         private void Da_co_tai_khoan(object sender, MouseButtonEventArgs e)
         {
 
-            man_hinh_dang_nhap manhinhWindow = new man_hinh_dang_nhap();
-            manhinhWindow.Show();
-            
+            var myControl = new ctrl_dang_nhap();
+
+            myControl.UserControlContainer = UserControlContainer;
+            UserControlContainer.Content = myControl;
+
+
+
+
         }
 
         private void Da_co_tai_khoan_enter(object sender, DragEventArgs e)
@@ -185,9 +190,10 @@ namespace Quan_ly_tai_nguyen_rung_wpf
 
         private void Quen_mat_khau(object sender, MouseButtonEventArgs e)
         {
-            man_hinh_quen_mat_khau manhinhWindow = new man_hinh_quen_mat_khau();
-            manhinhWindow.Show();
-            
+            var myControl = new ctrl_quen_mat_khau();
+            myControl.UserControlContainer = UserControlContainer;
+            UserControlContainer.Content = myControl;
+
         }
 
         private void Quen_mat_khau_enter(object sender, MouseEventArgs e)

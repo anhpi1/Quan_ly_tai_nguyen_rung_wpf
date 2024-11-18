@@ -149,7 +149,7 @@ namespace Quan_ly_tai_nguyen_rung_wpf
             button1.BorderBrush = brush;
         }
         private void LoginButton_Click(object sender, MouseButtonEventArgs e) {
-            var myControl = ctrl_dang_nhap();
+            var myControl = new ctrl_dang_nhap();
             UserControlContainer.Content = myControl;
         }
     }

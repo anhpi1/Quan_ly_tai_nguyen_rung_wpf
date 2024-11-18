@@ -16,10 +16,16 @@
     <Compile Update="ctrl_dang_ki_thanh_cong.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="man_hinh_dang_nhap.xaml.cs">
+    <Compile Update="ctrl_dang_nhap.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="man_hinh_quen_mat_khau.xaml.cs">
+    <Compile Update="ctrl_lay_lai_mat_khau_thanh_cong.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ctrl_quen_mat_khau.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="man_hinh_dang_nhap.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -36,13 +42,19 @@
     <Page Update="ctrl_dang_ki_thanh_cong.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="ctrl_dang_nhap.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ctrl_lay_lai_mat_khau_thanh_cong.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ctrl_quen_mat_khau.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="man_hinh_dang_nhap.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="man_hinh_quen_mat_khau.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -59,14 +59,7 @@
                            FontSize="30"
                            VerticalAlignment="Center"
                            HorizontalAlignment="Center"></TextBlock>
-                <TextBlock Grid.Row="0" 
-                           Grid.RowSpan="2" 
-                           Grid.Column="1" 
-                           Grid.ColumnSpan="6" 
-                           Text="Đăng kí thành công!"
-                           FontSize="30"
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="Center"></TextBlock>
+
                 <Image Source="png/check.png"
                        Grid.Row="2"
                        Grid.Column="2"
@@ -96,7 +89,7 @@
                         MouseEnter="Border_MouseEnter" 
                         MouseLeave="Border_MouseLeave" MouseLeftButtonDown="LoginButton_Click"
                         >
-                    <TextBlock Text="Đăng kí"
+                    <TextBlock Text="Đăng nhập"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Center"
                                FontSize="24"></TextBlock>
