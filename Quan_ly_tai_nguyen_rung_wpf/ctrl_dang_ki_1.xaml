@@ -9,10 +9,6 @@
              d:DesignWidth="800">
     <Grid>
         <Border CornerRadius="20"
-                Grid.Row="1"
-                Grid.RowSpan="9"
-                Grid.Column="3"
-                Grid.ColumnSpan="4"
                 Background="#E8E8E8"
                 Style="{StaticResource hieu_ung_bong_trang}">
         </Border>

@@ -22,6 +22,7 @@ namespace Quan_ly_tai_nguyen_rung_wpf
     /// </summary>
     public partial class ctrl_dang_ki_thanh_cong : UserControl
     {
+        public ContentControl UserControlContainer { get; set; }
         public ctrl_dang_ki_thanh_cong()
         {
             InitializeComponent();
@@ -147,6 +148,9 @@ namespace Quan_ly_tai_nguyen_rung_wpf
             brush.BeginAnimation(SolidColorBrush.ColorProperty, colorAnimation);
             button1.BorderBrush = brush;
         }
-        private void LoginButton_Click(object sender, MouseButtonEventArgs e) { }
+        private void LoginButton_Click(object sender, MouseButtonEventArgs e) {
+            var myControl = ctrl_dang_nhap();
+            UserControlContainer.Content = myControl;
+        }
     }
 }

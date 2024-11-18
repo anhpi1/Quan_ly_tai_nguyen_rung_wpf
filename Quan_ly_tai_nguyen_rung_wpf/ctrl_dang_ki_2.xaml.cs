@@ -25,6 +25,10 @@ namespace Quan_ly_tai_nguyen_rung_wpf
     public partial class ctrl_dang_ki_2 : UserControl
     {
         public ContentControl UserControlContainer { get; set; }
+        public string username { get; set; }
+        public string password { get; set; }
+        public string phone { get; set; }
+
         public ctrl_dang_ki_2()
         {
             InitializeComponent();
@@ -153,7 +157,7 @@ namespace Quan_ly_tai_nguyen_rung_wpf
 
 
 
-       
+
 
         private void LoginButton_Click(object sender, MouseButtonEventArgs e)
         {
@@ -194,7 +198,7 @@ namespace Quan_ly_tai_nguyen_rung_wpf
             }
             if (address_o != "")
             {
-  
+
                 {
                     log_address.Text = "Tên đăng nhập:";
                     log_address.Foreground = new SolidColorBrush(Colors.Black);
@@ -207,7 +211,7 @@ namespace Quan_ly_tai_nguyen_rung_wpf
             }
             if (email_o != "")
             {
-  
+
                 {
                     log_email.Text = "Tên đăng nhập:";
                     log_email.Foreground = new SolidColorBrush(Colors.Black);
@@ -224,10 +228,11 @@ namespace Quan_ly_tai_nguyen_rung_wpf
             if (c > 0) return;
 
             // Nếu không có lỗi, ghi vào MySQL
-            if (SaveUserToDatabase(last_name_o, fist_name_o, address_o, email_o))
+            if (SaveUserToDatabase(last_name_o, fist_name_o, address_o, email_o, username, phone, password))
             {
 
                 var myControl = new ctrl_dang_ki_thanh_cong();
+                myControl.UserControlContainer = UserControlContainer;
                 UserControlContainer.Content = myControl;
 
 
@@ -238,32 +243,74 @@ namespace Quan_ly_tai_nguyen_rung_wpf
 
 
         // Hàm lưu người dùng vào cơ sở dữ liệu
-        private bool SaveUserToDatabase(string last_name, string first_name, string address, string email)
+        private bool SaveUserToDatabase(string last_name, string first_name, string address, string email, string username, string phone, string password)
         {
-            string connectionString = "server=localhost;user=root;database=test;password=123456;";
+            string connectionString = "server=localhost;user=root;database=quan_li_rung;password=123456;";
+
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 try
                 {
                     conn.Open();
-                    string query = "INSERT INTO users (first_name, last_name, address, email) VALUES (@first_name, @last_name, @address, @email)";
+                    string query = @"
+                    INSERT INTO auth_user (first_name, last_name, address, email, username, phone, password, is_superuser, is_staff, date_joined, last_login, is_active)
+                    VALUES (@first_name, @last_name, @address, @email, @username, @phone, @password, 0, 0, NOW(), NULL, 1)";
+
+
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
+                        // Gán giá trị cho các tham số
                         cmd.Parameters.AddWithValue("@first_name", first_name);
                         cmd.Parameters.AddWithValue("@last_name", last_name);
                         cmd.Parameters.AddWithValue("@address", address);
                         cmd.Parameters.AddWithValue("@email", email);
+                        cmd.Parameters.AddWithValue("@username", username);
+                        cmd.Parameters.AddWithValue("@phone", phone);
+                        cmd.Parameters.AddWithValue("@password", password);
 
+                        // Thực thi lệnh
                         cmd.ExecuteNonQuery();
                         return true;
                     }
+
                 }
+
                 catch (Exception ex)
                 {
-                    // Optionally log the exception (ex.Message) for debugging
+                    // Tùy chọn ghi log lỗi
+                    ShowErrorMessage($"Đã xảy ra lỗi: {ex.Message}");
                     return false;
                 }
             }
+        }
+        private void ShowErrorMessage(string errorMessage)
+        {
+            // Tạo một cửa sổ mới để hiển thị lỗi
+            Window errorWindow = new Window
+            {
+                Title = "Lỗi",
+                Width = 400,
+                Height = 200,
+                WindowStartupLocation = WindowStartupLocation.CenterOwner,
+            };
+
+            // Tạo TextBox để hiển thị lỗi
+            TextBox errorTextBox = new TextBox
+            {
+                Text = errorMessage,
+                IsReadOnly = true,  // Để không thể chỉnh sửa, chỉ có thể sao chép
+                VerticalScrollBarVisibility = ScrollBarVisibility.Auto,
+                HorizontalScrollBarVisibility = ScrollBarVisibility.Auto,
+                Margin = new Thickness(10),
+                VerticalAlignment = VerticalAlignment.Stretch,
+                HorizontalAlignment = HorizontalAlignment.Stretch
+            };
+
+            // Thêm TextBox vào cửa sổ
+            errorWindow.Content = errorTextBox;
+
+            // Hiển thị cửa sổ lỗi
+            errorWindow.ShowDialog();
         }
 
     }

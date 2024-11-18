@@ -16,6 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Crmf;
 
 namespace Quan_ly_tai_nguyen_rung_wpf
 {
@@ -25,9 +26,10 @@ namespace Quan_ly_tai_nguyen_rung_wpf
     public partial class ctrl_dang_ki_1 : UserControl
     {
         public ContentControl UserControlContainer { get; set; }
-
+        
         public ctrl_dang_ki_1()
         {
+            
             InitializeComponent();
             this.DataContext = new MainViewModel();
         }
@@ -234,6 +236,7 @@ namespace Quan_ly_tai_nguyen_rung_wpf
         }
         private void LoginButton_Click(object sender, MouseButtonEventArgs e)
         {
+            
             // Lấy thông tin từ các trường nhập liệu
             string username = used_name.Text.Trim();
             string phone = so_dien_thoai.Text.Trim();
@@ -333,27 +336,29 @@ namespace Quan_ly_tai_nguyen_rung_wpf
             if (c > 0) return;
 
             // Nếu không có lỗi, ghi vào MySQL
-            if (SaveUserToDatabase(username, phone, password))
-            {
 
-                var myControl = new ctrl_dang_ki_2();
-                UserControlContainer.Content = myControl;
+            var myControl = new ctrl_dang_ki_2();
+            myControl.username = username;
+            myControl.phone = phone;
+            myControl.password = password;
+            myControl.UserControlContainer = UserControlContainer;
+            UserControlContainer.Content = myControl;
+            
 
 
-            }
 
         }
 
         // Hàm kiểm tra người dùng đã tồn tại
         private bool IsUserExistsUsername(string username)
         {
-            string connectionString = "server=localhost;user=root;database=test;password=123456;";
+            string connectionString = "server=localhost;user=root;database=quan_li_rung;password=123456;";
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 try
                 {
                     conn.Open();
-                    string query = "SELECT COUNT(*) FROM users WHERE username = @username";
+                    string query = "SELECT COUNT(*) FROM auth_user WHERE username = @username";
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@username", username);
@@ -363,20 +368,21 @@ namespace Quan_ly_tai_nguyen_rung_wpf
                 }
                 catch (Exception ex)
                 {
-                    
+                    MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+
                     return true;
                 }
             }
         }
         private bool IsUserExistsPhone(string phone)
         {
-            string connectionString = "server=localhost;user=root;database=test;password=123456;";
+            string connectionString = "server=localhost;user=root;database=quan_li_rung;password=123456;";
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 try
                 {
                     conn.Open();
-                    string query = "SELECT COUNT(*) FROM users WHERE  phone = @phone";
+                    string query = "SELECT COUNT(*) FROM auth_user WHERE  phone = @phone";
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@phone", phone);
@@ -387,37 +393,14 @@ namespace Quan_ly_tai_nguyen_rung_wpf
                 }
                 catch (Exception ex)
                 {
-                    
+                    MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+
                     return true;
                 }
             }
         }
 
         // Hàm lưu người dùng vào cơ sở dữ liệu
-        private bool SaveUserToDatabase(string username, string phone, string password)
-        {
-            string connectionString = "server=localhost;user=root;database=test;password=123456;";
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
-            {
-                try
-                {
-                    conn.Open();
-                    string query = "INSERT INTO users (username, phone, password) VALUES (@username, @phone, @password)";
-                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@username", username);
-                        cmd.Parameters.AddWithValue("@phone", phone);
-                        cmd.Parameters.AddWithValue("@password", password);
-                        cmd.ExecuteNonQuery();
-                        return true;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    
-                    return false;
-                }
-            }
-        }
+
     }
 }
