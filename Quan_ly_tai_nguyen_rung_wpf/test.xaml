@@ -1,0 +1,32 @@
+﻿<Window x:Class="Quan_ly_tai_nguyen_rung_wpf.test"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Quan_ly_tai_nguyen_rung_wpf"
+        mc:Ignorable="d"
+        Title="test" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button x:Name="btn_main"
+                Click="btn_main_Click">điều khiển nội dung bên trong ctrl</Button>
+        <ContentControl x:Name="main"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="1"
+                        Grid.RowSpan="2"></ContentControl>
+        <TextBlock  Grid.Row="1"
+                    x:Name="txb_main"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="1"
+                    Grid.RowSpan="1">i am in main</TextBlock>
+        
+    </Grid>
+</Window>

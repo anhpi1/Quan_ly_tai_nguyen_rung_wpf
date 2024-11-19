@@ -10,9 +10,10 @@
         <!-- Tham chiếu đến ResourceDictionary chứa hiệu ứng bóng đổ -->
 
     </Window.Resources>
-    <Grid>
-        <Button Content="Mở cửa sổ Manhinh" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_OpenManhinh_Click"/>
-
-    </Grid>
+    <StackPanel>
+        <Button Content="Mở cửa sổ Manhinh" Click="Button_OpenManhinh_Click"/>
+        <Button Content="Mở cửa sổ test"
+                Click="Button_Click" />
+    </StackPanel>
 </Window>
 
