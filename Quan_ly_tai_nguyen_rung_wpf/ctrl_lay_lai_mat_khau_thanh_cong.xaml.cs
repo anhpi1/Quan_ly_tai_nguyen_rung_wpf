@@ -27,6 +27,8 @@ namespace Quan_ly_tai_nguyen_rung_wpf
             InitializeComponent();
         }
         public ContentControl UserControlContainer { get; set; }
+        public Window newscreen { get; set; }
+        
 
         private void Border_MouseEnter(object sender, MouseEventArgs e)
         {
@@ -152,7 +154,11 @@ namespace Quan_ly_tai_nguyen_rung_wpf
         private void LoginButton_Click(object sender, MouseButtonEventArgs e)
         {
             var myControl = new ctrl_dang_nhap();
+                  
+        myControl.UserControlContainer = UserControlContainer;
+            myControl.newscreen = newscreen;
             UserControlContainer.Content = myControl;
+
         }
     }
 }

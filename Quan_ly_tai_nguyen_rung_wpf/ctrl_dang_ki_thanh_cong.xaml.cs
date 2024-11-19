@@ -23,6 +23,8 @@ namespace Quan_ly_tai_nguyen_rung_wpf
     public partial class ctrl_dang_ki_thanh_cong : UserControl
     {
         public ContentControl UserControlContainer { get; set; }
+        public Window newscreen { get; set; }
+       
         public ctrl_dang_ki_thanh_cong()
         {
             InitializeComponent();
@@ -150,6 +152,9 @@ namespace Quan_ly_tai_nguyen_rung_wpf
         }
         private void LoginButton_Click(object sender, MouseButtonEventArgs e) {
             var myControl = new ctrl_dang_nhap();
+                   
+        myControl.UserControlContainer = UserControlContainer;
+            myControl.newscreen = newscreen;
             UserControlContainer.Content = myControl;
         }
     }

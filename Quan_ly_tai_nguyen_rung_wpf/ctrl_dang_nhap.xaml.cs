@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Crmf;
 
 namespace Quan_ly_tai_nguyen_rung_wpf
 {
@@ -24,6 +25,7 @@ namespace Quan_ly_tai_nguyen_rung_wpf
     public partial class ctrl_dang_nhap : UserControl
     {
         public ContentControl UserControlContainer { get; set; }
+        public Window newscreen { get; set; }
         public ctrl_dang_nhap()
         {
             InitializeComponent();
@@ -179,8 +181,9 @@ namespace Quan_ly_tai_nguyen_rung_wpf
 
                         if (result > 0)
                         {
-                            MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
-
+                            man_hinh_menu screen = new man_hinh_menu();
+                            screen.Show();
+                            newscreen.Close();
                             // Hiển thị cửa sổ khác hoặc thực hiện hành động khác
                             // Ví dụ: mở cửa sổ chính
                         }
@@ -200,7 +203,9 @@ namespace Quan_ly_tai_nguyen_rung_wpf
         private void Chua_co_tai_khoan(object sender, MouseButtonEventArgs e)
         {
             var myControl = new ctrl_dang_ki_1();
-            myControl.UserControlContainer = UserControlContainer;
+                   
+        myControl.UserControlContainer = UserControlContainer;
+            myControl.newscreen = newscreen;
             UserControlContainer.Content = myControl;
 
 
@@ -228,7 +233,9 @@ namespace Quan_ly_tai_nguyen_rung_wpf
         private void Quen_mat_khau(object sender, MouseButtonEventArgs e)
         {
             var myControl = new ctrl_quen_mat_khau();
-            myControl.UserControlContainer = UserControlContainer;
+                   
+        myControl.UserControlContainer = UserControlContainer;
+            myControl.newscreen = newscreen;
             UserControlContainer.Content = myControl;
 
         }

@@ -29,6 +29,7 @@ namespace Quan_ly_tai_nguyen_rung_wpf
             InitializeComponent();
             var myControl = new ctrl_dang_nhap();
             myControl.UserControlContainer = UserControlContainer;
+            myControl.newscreen = this;
             UserControlContainer.Content = myControl;
         }
 

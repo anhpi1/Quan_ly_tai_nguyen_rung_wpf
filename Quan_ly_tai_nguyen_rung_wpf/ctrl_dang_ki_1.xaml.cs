@@ -26,7 +26,9 @@ namespace Quan_ly_tai_nguyen_rung_wpf
     public partial class ctrl_dang_ki_1 : UserControl
     {
         public ContentControl UserControlContainer { get; set; }
-        
+        public Window newscreen { get; set; }
+
+
         public ctrl_dang_ki_1()
         {
             
@@ -163,6 +165,7 @@ namespace Quan_ly_tai_nguyen_rung_wpf
             var myControl = new ctrl_dang_nhap();
 
             myControl.UserControlContainer = UserControlContainer;
+            myControl.newscreen = newscreen;
             UserControlContainer.Content = myControl;
 
 
@@ -191,7 +194,9 @@ namespace Quan_ly_tai_nguyen_rung_wpf
         private void Quen_mat_khau(object sender, MouseButtonEventArgs e)
         {
             var myControl = new ctrl_quen_mat_khau();
-            myControl.UserControlContainer = UserControlContainer;
+                    
+        myControl.UserControlContainer = UserControlContainer;
+            myControl.newscreen = newscreen;
             UserControlContainer.Content = myControl;
 
         }
@@ -347,7 +352,9 @@ namespace Quan_ly_tai_nguyen_rung_wpf
             myControl.username = username;
             myControl.phone = phone;
             myControl.password = password;
-            myControl.UserControlContainer = UserControlContainer;
+                   
+        myControl.UserControlContainer = UserControlContainer;
+            myControl.newscreen = newscreen;
             UserControlContainer.Content = myControl;
             
 

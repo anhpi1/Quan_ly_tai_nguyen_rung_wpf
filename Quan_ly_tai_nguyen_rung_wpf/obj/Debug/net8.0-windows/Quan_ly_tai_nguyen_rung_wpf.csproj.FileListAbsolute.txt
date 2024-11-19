@@ -110,3 +110,5 @@ C:\Users\k\Documents\GitHub\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_
 C:\Users\k\Documents\GitHub\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\obj\Debug\net8.0-windows\ctrl_quen_mat_khau.baml
 C:\Users\k\Documents\GitHub\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\obj\Debug\net8.0-windows\ctrl_lay_lai_mat_khau_thanh_cong.g.cs
 C:\Users\k\Documents\GitHub\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\obj\Debug\net8.0-windows\ctrl_lay_lai_mat_khau_thanh_cong.baml
+C:\Users\k\Documents\GitHub\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\obj\Debug\net8.0-windows\man_hinh_menu.g.cs
+C:\Users\k\Documents\GitHub\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\obj\Debug\net8.0-windows\man_hinh_menu.baml

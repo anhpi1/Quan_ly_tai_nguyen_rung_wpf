@@ -29,6 +29,8 @@ namespace Quan_ly_tai_nguyen_rung_wpf
             InitializeComponent();
         }
         public ContentControl UserControlContainer { get; set; }
+        public Window newscreen { get; set; }
+        
 
         private void Border_MouseEnter(object sender, MouseEventArgs e)
         {
@@ -159,7 +161,9 @@ namespace Quan_ly_tai_nguyen_rung_wpf
 
             var myControl = new ctrl_dang_nhap();
 
-            myControl.UserControlContainer = UserControlContainer;
+                   
+        myControl.UserControlContainer = UserControlContainer;
+            myControl.newscreen = newscreen;
             UserControlContainer.Content = myControl;
 
 
@@ -323,8 +327,10 @@ namespace Quan_ly_tai_nguyen_rung_wpf
             {
 
                 var myControl = new ctrl_lay_lai_mat_khau_thanh_cong();
-                myControl.UserControlContainer = UserControlContainer;
-                UserControlContainer.Content = myControl;
+                        
+        myControl.UserControlContainer = UserControlContainer;
+            myControl.newscreen = newscreen;
+            UserControlContainer.Content = myControl;
 
 
             }
@@ -473,7 +479,9 @@ namespace Quan_ly_tai_nguyen_rung_wpf
         private void Chua_co_tai_khoan(object sender, MouseButtonEventArgs e)
         {
             var myControl = new ctrl_dang_ki_1();
-            myControl.UserControlContainer = UserControlContainer;
+                    
+        myControl.UserControlContainer = UserControlContainer;
+            myControl.newscreen = newscreen;
             UserControlContainer.Content = myControl;
         }
     }

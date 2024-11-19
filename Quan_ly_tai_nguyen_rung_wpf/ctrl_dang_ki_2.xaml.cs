@@ -25,6 +25,7 @@ namespace Quan_ly_tai_nguyen_rung_wpf
     public partial class ctrl_dang_ki_2 : UserControl
     {
         public ContentControl UserControlContainer { get; set; }
+        public Window newscreen { get; set; }
         public string username { get; set; }
         public string password { get; set; }
         public string phone { get; set; }
@@ -232,8 +233,10 @@ namespace Quan_ly_tai_nguyen_rung_wpf
             {
 
                 var myControl = new ctrl_dang_ki_thanh_cong();
-                myControl.UserControlContainer = UserControlContainer;
-                UserControlContainer.Content = myControl;
+                        
+        myControl.UserControlContainer = UserControlContainer;
+            myControl.newscreen = newscreen;
+            UserControlContainer.Content = myControl;
 
 
             }
