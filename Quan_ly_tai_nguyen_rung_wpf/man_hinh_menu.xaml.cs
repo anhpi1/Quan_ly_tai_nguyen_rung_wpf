@@ -34,7 +34,141 @@ namespace Quan_ly_tai_nguyen_rung_wpf
         {
             InitializeComponent();
         }
+        public void enter035(string den, string trang)
+        {
 
+            Border button1 = this.FindName(den) as Border;
+            Border button1_trang = this.FindName(trang) as Border;
+            // Tạo DropShadowEffect màu đen
+            var shadowEffect_black = new DropShadowEffect
+            {
+                Color = Colors.Black,
+                Direction = -45,
+                ShadowDepth = 6,
+                BlurRadius = 10,
+                Opacity = 0.2 // Bắt đầu với opacity nhỏ
+            };
+
+            button1.Effect = shadowEffect_black;
+
+            // Tạo animation tăng dần opacity
+            var opacityAnimation_black = new DoubleAnimation
+            {
+                From = 0.2,
+                To = 0, // Độ trong suốt tối đa
+                Duration = TimeSpan.FromSeconds(0.35),
+                EasingFunction = new QuadraticEase()
+            };
+            shadowEffect_black.BeginAnimation(DropShadowEffect.OpacityProperty, opacityAnimation_black);
+
+            // Tạo DropShadowEffect màu trắng
+            var shadowEffect_white = new DropShadowEffect
+            {
+                Color = Colors.White,
+                Direction = 135,
+                ShadowDepth = 6,
+                BlurRadius = 10,
+                Opacity = 0.8 // Bắt đầu với opacity nhỏ
+            };
+
+            button1_trang.Effect = shadowEffect_white;
+
+            // Tạo animation tăng dần opacity
+            var opacityAnimation_white = new DoubleAnimation
+            {
+                From = 0.8,
+                To = 0, // Độ trong suốt tối đa
+                Duration = TimeSpan.FromSeconds(0.35),
+                EasingFunction = new QuadraticEase()
+            };
+            shadowEffect_white.BeginAnimation(DropShadowEffect.OpacityProperty, opacityAnimation_white);
+
+            var thicknessAnimation = new ThicknessAnimation
+            {
+                To = new Thickness(1),
+                Duration = TimeSpan.FromSeconds(0.35), // Thời gian chuyển đổi
+                EasingFunction = new QuadraticEase() // Hiệu ứng chuyển động mượt
+            };
+            button1.BeginAnimation(BorderThicknessProperty, thicknessAnimation);
+
+            // Tạo hiệu ứng thay đổi BorderBrush
+            var colorAnimation = new ColorAnimation
+            {
+                To = Color.FromArgb(0xFF, 0xB4, 0xB4, 0xB4),
+                Duration = TimeSpan.FromSeconds(0.35)
+            };
+            var brush = new SolidColorBrush();
+            brush.BeginAnimation(SolidColorBrush.ColorProperty, colorAnimation);
+            button1.BorderBrush = brush;
+        }
+
+        public void leave035(string den, string trang)
+        {
+            Border button1 = this.FindName(den) as Border;
+            Border button1_trang = this.FindName(trang) as Border;
+
+            if (button1 == null || button1_trang == null) return;
+
+            // Tạo mới DropShadowEffect cho button1
+            var shadowEffectBlack = new DropShadowEffect
+            {
+                Direction = -45,
+                Opacity = 0.2, // Đặt giá trị ban đầu
+                BlurRadius = 10,
+                ShadowDepth = 6,
+                Color = Colors.Black
+            };
+            button1.Effect = shadowEffectBlack;
+
+            // Animation giảm dần Opacity cho button1
+            var opacityAnimationBlack = new DoubleAnimation
+            {
+                From = shadowEffectBlack.Opacity,
+                To = 0.2, // Giảm dần về 0.2
+                Duration = TimeSpan.FromSeconds(0.35),
+                EasingFunction = new QuadraticEase()
+            };
+            shadowEffectBlack.BeginAnimation(DropShadowEffect.OpacityProperty, opacityAnimationBlack);
+
+            // Tạo mới DropShadowEffect cho button1_trang
+            var shadowEffectWhite = new DropShadowEffect
+            {
+                Direction = 135,
+                Opacity = 0.8, // Đặt giá trị ban đầu
+                BlurRadius = 10,
+                ShadowDepth = 6,
+                Color = Colors.White
+            };
+            button1_trang.Effect = shadowEffectWhite;
+
+            // Animation giảm dần Opacity cho button1_trang
+            var opacityAnimationWhite = new DoubleAnimation
+            {
+                From = shadowEffectWhite.Opacity,
+                To = 0.8, // Giảm dần về 0.4
+                Duration = TimeSpan.FromSeconds(0.35),
+                EasingFunction = new QuadraticEase()
+            };
+            shadowEffectWhite.BeginAnimation(DropShadowEffect.OpacityProperty, opacityAnimationWhite);
+            // Tạo hiệu ứng chuyển đổi BorderThickness về 0
+            var thicknessAnimation = new ThicknessAnimation
+            {
+                To = new Thickness(0),
+                Duration = TimeSpan.FromSeconds(0.35),
+                EasingFunction = new QuadraticEase()
+            };
+            button1.BeginAnimation(BorderThicknessProperty, thicknessAnimation);
+
+            // Loại bỏ BorderBrush bằng hiệu ứng
+            var colorAnimation = new ColorAnimation
+            {
+                To = Colors.Transparent,
+                Duration = TimeSpan.FromSeconds(0.35)
+            };
+            var brush = new SolidColorBrush(Color.FromArgb(0xFF, 0xB4, 0xB4, 0xB4)); // Giá trị khởi tạo
+            brush.BeginAnimation(SolidColorBrush.ColorProperty, colorAnimation);
+            button1.BorderBrush = brush;
+        }
         public void enter(string den, string trang) 
         {
 
@@ -622,12 +756,12 @@ namespace Quan_ly_tai_nguyen_rung_wpf
                 {
                     From = 1280,                // Chiều rộng ban đầu
                     To = 1188.89,  // Chiều rộng kết thúc (trở về chiều rộng ban đầu của MyRectangle1)
-                    Duration = new Duration(TimeSpan.FromSeconds(0.2)), // Thời gian thay đổi
+                    Duration = new Duration(TimeSpan.FromSeconds(0.35)), // Thời gian thay đổi
                     RepeatBehavior = new RepeatBehavior(1)             // Số lần lặp
                 };
                 man_hinh_den.BeginAnimation(WidthProperty, withmenu);  // Thực thi trên Border menu_trang
                 man_hinh_trang.BeginAnimation(WidthProperty, withmenu);
-                enter("man_hinh_den", "man_hinh_trang");
+                enter035("man_hinh_den", "man_hinh_trang");
             }
             else 
             { 
@@ -638,12 +772,12 @@ namespace Quan_ly_tai_nguyen_rung_wpf
                 {
                     From = 1188.89,                // Chiều rộng ban đầu
                     To = 1280,  // Chiều rộng kết thúc (trở về chiều rộng ban đầu của MyRectangle1)
-                    Duration = new Duration(TimeSpan.FromSeconds(0.2)), // Thời gian thay đổi
+                    Duration = new Duration(TimeSpan.FromSeconds(0.35)), // Thời gian thay đổi
                     RepeatBehavior = new RepeatBehavior(1)             // Số lần lặp
                 };
                 man_hinh_den.BeginAnimation(WidthProperty, withmenu);  // Thực thi trên Border menu_trang
                 man_hinh_trang.BeginAnimation(WidthProperty, withmenu);
-                leave("man_hinh_den", "man_hinh_trang");
+                leave035("man_hinh_den", "man_hinh_trang");
 
             }
             

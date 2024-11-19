@@ -320,7 +320,6 @@
             <Border x:Name="man_hinh_den"
                     Style="{StaticResource hieu_ung_bong_den}"
                     Background="#E8E8E8"
-                    
                     CornerRadius="5"
                     VerticalAlignment="Stretch"
                     HorizontalAlignment="Right"
