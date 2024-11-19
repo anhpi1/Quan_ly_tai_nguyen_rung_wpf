@@ -8,6 +8,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("png/ban_do_1.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("png/ban_do_2.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("png/ban_do_3.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("png/check.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("png/dong_vat_1.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("png/dong_vat_2.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("png/dong_vat_3.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("png/go_1.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("png/go_2.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("png/go_3.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("png/hanh_chinh_1.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("png/hanh_chinh_2.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("png/hanh_chinh_3.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("png/hat_cay_1.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("png/hat_cay_2.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("png/hat_cay_3.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("png/he_thong_1.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("png/he_thong_2.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("png/he_thong_3.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("png/home_1.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("png/home_2.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("png/home_3.png")]
 
 

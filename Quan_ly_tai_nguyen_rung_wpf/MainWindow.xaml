@@ -5,15 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Quan_ly_tai_nguyen_rung_wpf"
         mc:Ignorable="d"
-        Title="main " Height="720" Width="1280">
+        Title="main "
+        Height="720"
+        Width="1280">
     <Window.Resources>
         <!-- Tham chiếu đến ResourceDictionary chứa hiệu ứng bóng đổ -->
 
     </Window.Resources>
     <StackPanel>
-        <Button Content="Mở cửa sổ Manhinh" Click="Button_OpenManhinh_Click"/>
+        <Button Content="Mở cửa sổ Manhinh"
+                Click="Button_OpenManhinh_Click" />
         <Button Content="Mở cửa sổ test"
                 Click="Button_Click" />
+        <Button Content="Mở cửa sổ menu"
+                Click="Button_Click_1" />
     </StackPanel>
 </Window>
 

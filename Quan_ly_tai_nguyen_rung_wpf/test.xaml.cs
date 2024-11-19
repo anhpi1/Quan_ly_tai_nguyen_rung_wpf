@@ -24,14 +24,23 @@ namespace Quan_ly_tai_nguyen_rung_wpf
         public test()
         {
             InitializeComponent();
-            var myCtrl = new ctrl_test();
-            myCtrl.txb_main = txb_main;
-            main.Content = myCtrl;
+           
         }
 
-        private void btn_main_Click(object sender, RoutedEventArgs e)
+        private void btn1_Click(object sender, RoutedEventArgs e)
         {
-            txb_ctrl.Text = ("đã nhận lệnh từ btn_main");
+            // Hiển thị noi_dung1 và ẩn noi_dung2
+            noi_dung1.Visibility = Visibility.Visible;
+            noi_dung2.Visibility = Visibility.Collapsed;
         }
+
+        private void btn2_Click(object sender, RoutedEventArgs e)
+        {
+            // Hiển thị noi_dung2 và ẩn noi_dung1
+            noi_dung1.Visibility = Visibility.Collapsed;
+            noi_dung2.Visibility = Visibility.Visible;
+        }
+
+ 
     }
 }

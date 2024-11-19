@@ -153,7 +153,7 @@ namespace Quan_ly_tai_nguyen_rung_wpf
         private void LoginButton_Click(object sender, MouseButtonEventArgs e) {
             var myControl = new ctrl_dang_nhap();
                    
-        myControl.UserControlContainer = UserControlContainer;
+            myControl.UserControlContainer = UserControlContainer;
             myControl.newscreen = newscreen;
             UserControlContainer.Content = myControl;
         }

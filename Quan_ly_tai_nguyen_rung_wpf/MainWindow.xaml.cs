@@ -29,6 +29,12 @@ namespace Quan_ly_tai_nguyen_rung_wpf
             test manhinhWindow = new test();
             manhinhWindow.Show();  // Hiển thị cửa sổ Manhinh
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            man_hinh_menu main = new man_hinh_menu();
+            main.Show();
+        }
     }
 
 }
