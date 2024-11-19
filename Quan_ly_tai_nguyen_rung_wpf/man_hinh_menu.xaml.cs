@@ -22,6 +22,14 @@ namespace Quan_ly_tai_nguyen_rung_wpf
     /// </summary>
     public partial class man_hinh_menu : Window
     {
+        private bool home = false;
+        private bool hanh_chinh = false;
+        private bool hat_cay = false;
+        private bool go = false;
+        private bool dong_vat = false;
+        private bool ban_do = false;
+        private bool he_thong = false;
+        private bool menu = true;
         public man_hinh_menu()
         {
             InitializeComponent();
@@ -49,7 +57,7 @@ namespace Quan_ly_tai_nguyen_rung_wpf
             {
                 From = 0.2,
                 To = 0, // Độ trong suốt tối đa
-                Duration = TimeSpan.FromSeconds(0.1),
+                Duration = TimeSpan.FromSeconds(0.2),
                 EasingFunction = new QuadraticEase()
             };
             shadowEffect_black.BeginAnimation(DropShadowEffect.OpacityProperty, opacityAnimation_black);
@@ -71,7 +79,7 @@ namespace Quan_ly_tai_nguyen_rung_wpf
             {
                 From = 0.8,
                 To = 0, // Độ trong suốt tối đa
-                Duration = TimeSpan.FromSeconds(0.1),
+                Duration = TimeSpan.FromSeconds(0.2),
                 EasingFunction = new QuadraticEase()
             };
             shadowEffect_white.BeginAnimation(DropShadowEffect.OpacityProperty, opacityAnimation_white);
@@ -79,7 +87,7 @@ namespace Quan_ly_tai_nguyen_rung_wpf
             var thicknessAnimation = new ThicknessAnimation
             {
                 To = new Thickness(1),
-                Duration = TimeSpan.FromSeconds(0.1), // Thời gian chuyển đổi
+                Duration = TimeSpan.FromSeconds(0.2), // Thời gian chuyển đổi
                 EasingFunction = new QuadraticEase() // Hiệu ứng chuyển động mượt
             };
             button1.BeginAnimation(BorderThicknessProperty, thicknessAnimation);
@@ -88,57 +96,66 @@ namespace Quan_ly_tai_nguyen_rung_wpf
             var colorAnimation = new ColorAnimation
             {
                 To = Color.FromArgb(0xFF, 0xB4, 0xB4, 0xB4),
-                Duration = TimeSpan.FromSeconds(0.1)
+                Duration = TimeSpan.FromSeconds(0.2)
             };
             var brush = new SolidColorBrush();
             brush.BeginAnimation(SolidColorBrush.ColorProperty, colorAnimation);
             button1.BorderBrush = brush;
         }
+
         public void leave(string den, string trang)
         {
-
             Border button1 = this.FindName(den) as Border;
             Border button1_trang = this.FindName(trang) as Border;
-            if (button1.Effect is DropShadowEffect shadowEffect_black)
+
+            if (button1 == null || button1_trang == null) return;
+
+            // Tạo mới DropShadowEffect cho button1
+            var shadowEffectBlack = new DropShadowEffect
             {
-                // Tạo animation giảm dần opacity
-                var opacityAnimation_black = new DoubleAnimation
-                {
-                    From = shadowEffect_black.Opacity,
-                    To = 0.2, // Mất bóng dần
-                    Duration = TimeSpan.FromSeconds(0.1),
-                    EasingFunction = new QuadraticEase()
-                };
+                Direction = -45,
+                Opacity = 0.2, // Đặt giá trị ban đầu
+                BlurRadius = 10,
+                ShadowDepth = 6,
+                Color = Colors.Black
+            };
+            button1.Effect = shadowEffectBlack;
 
-                // Bắt đầu animation
-                shadowEffect_black.BeginAnimation(DropShadowEffect.OpacityProperty, opacityAnimation_black);
-
-                // Xóa hiệu ứng sau khi animation kết thúc
-                opacityAnimation_black.Completed += (s, a) => button1.Effect = null;
-            }
-            if (button1_trang.Effect is DropShadowEffect shadowEffect_white)
+            // Animation giảm dần Opacity cho button1
+            var opacityAnimationBlack = new DoubleAnimation
             {
-                // Tạo animation giảm dần opacity
-                var opacityAnimation_white = new DoubleAnimation
-                {
-                    From = shadowEffect_white.Opacity,
-                    To = 0.8, // Mất bóng dần
-                    Duration = TimeSpan.FromSeconds(0.1),
-                    EasingFunction = new QuadraticEase()
-                };
+                From = shadowEffectBlack.Opacity,
+                To = 0.2, // Giảm dần về 0.2
+                Duration = TimeSpan.FromSeconds(0.2),
+                EasingFunction = new QuadraticEase()
+            };
+            shadowEffectBlack.BeginAnimation(DropShadowEffect.OpacityProperty, opacityAnimationBlack);
 
-                // Bắt đầu animation
-                shadowEffect_white.BeginAnimation(DropShadowEffect.OpacityProperty, opacityAnimation_white);
+            // Tạo mới DropShadowEffect cho button1_trang
+            var shadowEffectWhite = new DropShadowEffect
+            {
+                Direction = 135,
+                Opacity = 0.8, // Đặt giá trị ban đầu
+                BlurRadius = 10,
+                ShadowDepth = 6,
+                Color = Colors.White
+            };
+            button1_trang.Effect = shadowEffectWhite;
 
-                // Xóa hiệu ứng sau khi animation kết thúc
-                opacityAnimation_white.Completed += (s, a) => button1_trang.Effect = null;
-
-            }
+            // Animation giảm dần Opacity cho button1_trang
+            var opacityAnimationWhite = new DoubleAnimation
+            {
+                From = shadowEffectWhite.Opacity,
+                To = 0.8, // Giảm dần về 0.4
+                Duration = TimeSpan.FromSeconds(0.2),
+                EasingFunction = new QuadraticEase()
+            };
+            shadowEffectWhite.BeginAnimation(DropShadowEffect.OpacityProperty, opacityAnimationWhite);
             // Tạo hiệu ứng chuyển đổi BorderThickness về 0
             var thicknessAnimation = new ThicknessAnimation
             {
                 To = new Thickness(0),
-                Duration = TimeSpan.FromSeconds(0.1),
+                Duration = TimeSpan.FromSeconds(0.2),
                 EasingFunction = new QuadraticEase()
             };
             button1.BeginAnimation(BorderThicknessProperty, thicknessAnimation);
@@ -147,7 +164,7 @@ namespace Quan_ly_tai_nguyen_rung_wpf
             var colorAnimation = new ColorAnimation
             {
                 To = Colors.Transparent,
-                Duration = TimeSpan.FromSeconds(0.1)
+                Duration = TimeSpan.FromSeconds(0.2)
             };
             var brush = new SolidColorBrush(Color.FromArgb(0xFF, 0xB4, 0xB4, 0xB4)); // Giá trị khởi tạo
             brush.BeginAnimation(SolidColorBrush.ColorProperty, colorAnimation);
@@ -187,6 +204,112 @@ namespace Quan_ly_tai_nguyen_rung_wpf
                 imageControl.Source = new BitmapImage(new Uri(anh_moi, UriKind.Relative));
             }
         }
+        private void RotateButton_Click()
+        {
+            // Tạo animation cho thuộc tính Angle (xoay hình chữ nhật)
+            DoubleAnimation rotateAnimation1 = new DoubleAnimation
+            {
+                From = 0,       // Góc bắt đầu
+                To = 45,        // Góc kết thúc (xoay 45 độ)
+                Duration = new Duration(TimeSpan.FromSeconds(0.2)), // Thời gian xoay
+                RepeatBehavior = new RepeatBehavior(1)           // Số lần lặp
+            };
+
+
+            // Tạo animation thay đổi độ mờ (Opacity)
+            DoubleAnimation opacityAnimation2 = new DoubleAnimation
+            {
+                From = 1,        // Độ mờ ban đầu (hiển thị hoàn toàn)
+                To = 0,          // Độ mờ kết thúc (biến mất)
+                Duration = new Duration(TimeSpan.FromSeconds(0.2))  // Thời gian biến mất
+            };
+
+            // Tạo animation xoay hình chữ nhật 2
+            DoubleAnimation rotateAnimation3 = new DoubleAnimation
+            {
+                From = 0,       // Góc bắt đầu
+                To = -45,       // Góc kết thúc (xoay 45 độ ngược chiều kim đồng hồ)
+                Duration = new Duration(TimeSpan.FromSeconds(0.2)), // Thời gian xoay
+                RepeatBehavior = new RepeatBehavior(1)           // Số lần lặp
+            };
+
+            // Tạo animation thay đổi chiều rộng của hình chữ nhật 3
+            DoubleAnimation widthAnimation3 = new DoubleAnimation
+            {
+                From = MyRectangle1.Width,    // Chiều rộng ban đầu
+                To = 54.57,                    // Chiều rộng kết thúc
+                Duration = new Duration(TimeSpan.FromSeconds(0.2)), // Thời gian thay đổi
+                RepeatBehavior = new RepeatBehavior(1)           // Số lần lặp
+            };
+
+            // Bắt đầu animation xoay hình chữ nhật 1
+            RectangleRotateTransform1.BeginAnimation(RotateTransform.AngleProperty, rotateAnimation1);
+
+            // Bắt đầu animation thay đổi chiều rộng của MyRectangle1
+            MyRectangle1.BeginAnimation(WidthProperty, widthAnimation3); // Sửa lại widthAnimation1 thành widthAnimation3
+
+            // Bắt đầu animation xoay hình chữ nhật 3
+            RectangleRotateTransform3.BeginAnimation(RotateTransform.AngleProperty, rotateAnimation3);
+
+            // Bắt đầu animation thay đổi chiều rộng của MyRectangle3
+            MyRectangle3.BeginAnimation(WidthProperty, widthAnimation3); // Sửa lại widthAnimation1 thành widthAnimation3
+
+            // Bắt đầu animation thay đổi độ mờ của hình chữ nhật 2 (biến mất)
+            MyRectangle2.BeginAnimation(UIElement.OpacityProperty, opacityAnimation2); // Sửa lại opacity animation đúng thuộc tính
+        }
+        private void ReverseRotateButton_Click()
+        {
+            // Tạo animation cho thuộc tính Angle (xoay ngược lại hình chữ nhật 1)
+            DoubleAnimation rotateAnimation1Reverse = new DoubleAnimation
+            {
+                From = 45,       // Góc ban đầu (45 độ)
+                To = 0,          // Góc kết thúc (trở về góc 0 độ)
+                Duration = new Duration(TimeSpan.FromSeconds(0.2)), // Thời gian xoay
+                RepeatBehavior = new RepeatBehavior(1)             // Số lần lặp
+            };
+
+            // Tạo animation thay đổi độ mờ (Opacity) của hình chữ nhật 2 (hiện lại)
+            DoubleAnimation opacityAnimation2Reverse = new DoubleAnimation
+            {
+                From = 0,        // Độ mờ ban đầu (ẩn)
+                To = 1,          // Độ mờ kết thúc (hiển thị hoàn toàn)
+                Duration = new Duration(TimeSpan.FromSeconds(0.2))  // Thời gian làm hiện lại
+            };
+
+            // Tạo animation xoay ngược lại hình chữ nhật 3
+            DoubleAnimation rotateAnimation3Reverse = new DoubleAnimation
+            {
+                From = -45,      // Góc bắt đầu (-45 độ)
+                To = 0,          // Góc kết thúc (trở về góc 0 độ)
+                Duration = new Duration(TimeSpan.FromSeconds(0.2)), // Thời gian xoay
+                RepeatBehavior = new RepeatBehavior(1)             // Số lần lặp
+            };
+
+            // Tạo animation thay đổi chiều rộng của hình chữ nhật 3 (quay lại chiều rộng ban đầu)
+            DoubleAnimation widthAnimation3Reverse = new DoubleAnimation
+            {
+                From = MyRectangle1.Width,                // Chiều rộng ban đầu
+                To = 40,     // Chiều rộng kết thúc (trở về chiều rộng ban đầu của MyRectangle1)
+                Duration = new Duration(TimeSpan.FromSeconds(0.2)), // Thời gian thay đổi
+                RepeatBehavior = new RepeatBehavior(1)             // Số lần lặp
+            };
+
+            // Bắt đầu animation xoay hình chữ nhật 1 (xoay trở lại góc 0 độ)
+            RectangleRotateTransform1.BeginAnimation(RotateTransform.AngleProperty, rotateAnimation1Reverse);
+
+            // Bắt đầu animation thay đổi chiều rộng của MyRectangle1 (quay lại chiều rộng ban đầu)
+            MyRectangle1.BeginAnimation(WidthProperty, widthAnimation3Reverse);
+
+            // Bắt đầu animation xoay hình chữ nhật 3 (xoay trở lại góc 0 độ)
+            RectangleRotateTransform3.BeginAnimation(RotateTransform.AngleProperty, rotateAnimation3Reverse);
+
+            // Bắt đầu animation thay đổi chiều rộng của MyRectangle3 (quay lại chiều rộng ban đầu)
+            MyRectangle3.BeginAnimation(WidthProperty, widthAnimation3Reverse);
+
+            // Bắt đầu animation thay đổi độ mờ của hình chữ nhật 2 (hiện lại hình chữ nhật 2)
+            MyRectangle2.BeginAnimation(UIElement.OpacityProperty, opacityAnimation2Reverse);
+        }
+
         private void home_enter(object sender, MouseEventArgs e)
         {
             enter("home_den", "home_trang");
@@ -195,15 +318,38 @@ namespace Quan_ly_tai_nguyen_rung_wpf
 
         private void home_leave(object sender, MouseEventArgs e)
         {
-            leave("home_den", "home_trang");
-            doi_anh("home_png", "png/home_1.png");
+            if (home)
+            {
+                leave("home_den", "home_trang");
+                doi_anh("home_png", "png/home_3.png");
+            }
+            else
+            {
+                leave("home_den", "home_trang");
+                doi_anh("home_png", "png/home_1.png");
+            }
+            
         }
 
         private void home_down(object sender, MouseButtonEventArgs e)
         {
             var myctrl = new ctrl_dang_ki_thanh_cong();
             noi_dung.Content = myctrl;
+            home =true;
+            hanh_chinh = false;
+            hat_cay = false;
+            go = false;
+            dong_vat= false;
+            ban_do = false;
+            he_thong = false;
             doi_anh("home_png", "png/home_3.png");
+            doi_anh("hanh_chinh_png", "png/hanh_chinh_1.png");
+            doi_anh("hat_cay_png", "png/hat_cay_1.png");
+            doi_anh("go_png", "png/go_1.png");
+            doi_anh("dong_vat_png", "png/dong_vat_1.png");
+            doi_anh("ban_do_png", "png/ban_do_1.png");
+            doi_anh("he_thong_png", "png/he_thong_1.png");
+
         }
         private void hanh_chinh_enter(object sender, MouseEventArgs e)
         {
@@ -213,15 +359,37 @@ namespace Quan_ly_tai_nguyen_rung_wpf
 
         private void hanh_chinh_leave(object sender, MouseEventArgs e)
         {
-            leave("hanh_chinh_den", "hanh_chinh_trang");
-            doi_anh("hanh_chinh_png", "png/hanh_chinh_1.png");
+            if (hanh_chinh)
+            {
+                leave("hanh_chinh_den", "hanh_chinh_trang");
+                doi_anh("hanh_chinh_png", "png/hanh_chinh_3.png");
+            }
+            else
+            {
+                leave("hanh_chinh_den", "hanh_chinh_trang");
+                doi_anh("hanh_chinh_png", "png/hanh_chinh_1.png");
+            }
+            
         }
 
         private void hanh_chinh_down(object sender, MouseButtonEventArgs e)
         {
             var myctrl = new ctrl_dang_ki_thanh_cong();
             noi_dung.Content = myctrl;
+            home = false;
+            hanh_chinh = true;
+            hat_cay = false;
+            go = false;
+            dong_vat = false;
+            ban_do = false;
+            he_thong = false;
+            doi_anh("home_png", "png/home_1.png");
             doi_anh("hanh_chinh_png", "png/hanh_chinh_3.png");
+            doi_anh("hat_cay_png", "png/hat_cay_1.png");
+            doi_anh("go_png", "png/go_1.png");
+            doi_anh("dong_vat_png", "png/dong_vat_1.png");
+            doi_anh("ban_do_png", "png/ban_do_1.png");
+            doi_anh("he_thong_png", "png/he_thong_1.png");
         }
         private void hat_cay_enter(object sender, MouseEventArgs e)
         {
@@ -231,15 +399,37 @@ namespace Quan_ly_tai_nguyen_rung_wpf
 
         private void hat_cay_leave(object sender, MouseEventArgs e)
         {
-            leave("hat_cay_den", "hat_cay_trang");
-            doi_anh("hat_cay_png", "png/hat_cay_1.png");
+            if (hat_cay)
+            {
+                leave("hat_cay_den", "hat_cay_trang");
+                doi_anh("hat_cay_png", "png/hat_cay_3.png");
+            }
+            else
+            {
+                leave("hat_cay_den", "hat_cay_trang");
+                doi_anh("hat_cay_png", "png/hat_cay_1.png");
+            }
+            
         }
 
         private void hat_cay_down(object sender, MouseButtonEventArgs e)
         {
             var myctrl = new ctrl_dang_ki_thanh_cong();
             noi_dung.Content = myctrl;
+            home = false;
+            hanh_chinh = false;
+            hat_cay = true;
+            go = false;
+            dong_vat = false;
+            ban_do = false;
+            he_thong = false;
+            doi_anh("home_png", "png/home_1.png");
+            doi_anh("hanh_chinh_png", "png/hanh_chinh_1.png");
             doi_anh("hat_cay_png", "png/hat_cay_3.png");
+            doi_anh("go_png", "png/go_1.png");
+            doi_anh("dong_vat_png", "png/dong_vat_1.png");
+            doi_anh("ban_do_png", "png/ban_do_1.png");
+            doi_anh("he_thong_png", "png/he_thong_1.png");
         }
         private void go_enter(object sender, MouseEventArgs e)
         {
@@ -249,15 +439,37 @@ namespace Quan_ly_tai_nguyen_rung_wpf
 
         private void go_leave(object sender, MouseEventArgs e)
         {
-            leave("go_den", "go_trang");
-            doi_anh("go_png", "png/go_1.png");
+            if (go)
+            {
+                leave("go_den", "go_trang");
+                doi_anh("go_png", "png/go_3.png");
+            }
+            else
+            {
+                leave("go_den", "go_trang");
+                doi_anh("go_png", "png/go_1.png");
+            }
+            
         }
 
         private void go_down(object sender, MouseButtonEventArgs e)
         {
             var myctrl = new ctrl_dang_ki_thanh_cong();
             noi_dung.Content = myctrl;
+            home = false;
+            hanh_chinh = false;
+            hat_cay = false;
+            go = true;
+            dong_vat = false;
+            ban_do = false;
+            he_thong = false;
+            doi_anh("home_png", "png/home_1.png");
+            doi_anh("hanh_chinh_png", "png/hanh_chinh_1.png");
+            doi_anh("hat_cay_png", "png/hat_cay_1.png");
             doi_anh("go_png", "png/go_3.png");
+            doi_anh("dong_vat_png", "png/dong_vat_1.png");
+            doi_anh("ban_do_png", "png/ban_do_1.png");
+            doi_anh("he_thong_png", "png/he_thong_1.png");
         }
         private void dong_vat_enter(object sender, MouseEventArgs e)
         {
@@ -267,15 +479,37 @@ namespace Quan_ly_tai_nguyen_rung_wpf
 
         private void dong_vat_leave(object sender, MouseEventArgs e)
         {
-            leave("dong_vat_den", "dong_vat_trang");
-            doi_anh("dong_vat_png", "png/dong_vat_1.png");
+            if (dong_vat)
+            {
+                leave("dong_vat_den", "dong_vat_trang");
+                doi_anh("dong_vat_png", "png/dong_vat_3.png");
+            }
+            else
+            {
+                leave("dong_vat_den", "dong_vat_trang");
+                doi_anh("dong_vat_png", "png/dong_vat_1.png");
+            }
+            
         }
 
         private void dong_vat_down(object sender, MouseButtonEventArgs e)
         {
             var myctrl = new ctrl_dang_ki_thanh_cong();
             noi_dung.Content = myctrl;
+            home = false;
+            hanh_chinh = false;
+            hat_cay = false;
+            go = false;
+            dong_vat = true;
+            ban_do = false;
+            he_thong = false;
+            doi_anh("home_png", "png/home_1.png");
+            doi_anh("hanh_chinh_png", "png/hanh_chinh_1.png");
+            doi_anh("hat_cay_png", "png/hat_cay_1.png");
+            doi_anh("go_png", "png/go_1.png");
             doi_anh("dong_vat_png", "png/dong_vat_3.png");
+            doi_anh("ban_do_png", "png/ban_do_1.png");
+            doi_anh("he_thong_png", "png/he_thong_1.png");
         }
         private void ban_do_enter(object sender, MouseEventArgs e)
         {
@@ -285,15 +519,37 @@ namespace Quan_ly_tai_nguyen_rung_wpf
 
         private void ban_do_leave(object sender, MouseEventArgs e)
         {
-            leave("ban_do_den", "ban_do_trang");
-            doi_anh("ban_do_png", "png/ban_do_1.png");
+            if (ban_do)
+            {
+                leave("ban_do_den", "ban_do_trang");
+                doi_anh("ban_do_png", "png/ban_do_3.png");
+            }
+            else
+            {
+                leave("ban_do_den", "ban_do_trang");
+                doi_anh("ban_do_png", "png/ban_do_1.png");
+            }
+            
         }
 
         private void ban_do_down(object sender, MouseButtonEventArgs e)
         {
             var myctrl = new ctrl_dang_ki_thanh_cong();
             noi_dung.Content = myctrl;
+            home = false;
+            hanh_chinh = false;
+            hat_cay = false;
+            go = false;
+            dong_vat = false;
+            ban_do = true;
+            he_thong = false;
+            doi_anh("home_png", "png/home_1.png");
+            doi_anh("hanh_chinh_png", "png/hanh_chinh_1.png");
+            doi_anh("hat_cay_png", "png/hat_cay_1.png");
+            doi_anh("go_png", "png/go_1.png");
+            doi_anh("dong_vat_png", "png/dong_vat_1.png");
             doi_anh("ban_do_png", "png/ban_do_3.png");
+            doi_anh("he_thong_png", "png/he_thong_1.png");
         }
         private void he_thong_enter(object sender, MouseEventArgs e)
         {
@@ -303,16 +559,96 @@ namespace Quan_ly_tai_nguyen_rung_wpf
 
         private void he_thong_leave(object sender, MouseEventArgs e)
         {
-            leave("he_thong_den", "he_thong_trang");
-            doi_anh("he_thong_png", "png/he_thong_1.png");
+            if (he_thong)
+            {
+                leave("he_thong_den", "he_thong_trang");
+                doi_anh("he_thong_png", "png/he_thong_3.png");
+            }
+            else
+            {
+                leave("he_thong_den", "he_thong_trang");
+                doi_anh("he_thong_png", "png/he_thong_1.png");
+            }
+            
         }
 
         private void he_thong_down(object sender, MouseButtonEventArgs e)
         {
             var myctrl = new ctrl_dang_ki_thanh_cong();
             noi_dung.Content = myctrl;
+            home = false;
+            hanh_chinh = false;
+            hat_cay = false;
+            go = false;
+            dong_vat = false;
+            ban_do = false;
+            he_thong = true;
+            doi_anh("home_png", "png/home_1.png");
+            doi_anh("hanh_chinh_png", "png/hanh_chinh_1.png");
+            doi_anh("hat_cay_png", "png/hat_cay_1.png");
+            doi_anh("go_png", "png/go_1.png");
+            doi_anh("dong_vat_png", "png/dong_vat_1.png");
+            doi_anh("ban_do_png", "png/ban_do_1.png");
             doi_anh("he_thong_png", "png/he_thong_3.png");
         }
+        private void menu_enter(object sender, MouseEventArgs e)
+        {
+            enter("menu_den", "menu_trang");
+            doi_anh("menu_png", "png/ban_do_2.png");
+        }
 
+        private void menu_leave(object sender, MouseEventArgs e)
+        {
+            if (menu)
+            {
+                leave("menu_den", "menu_trang");
+                doi_anh("menu_png", "png/ban_3.png");
+            }
+            else
+            {
+                leave("menu_den", "menu_trang");
+                doi_anh("menu_png", "png/ban_do_1.png");
+            }
+
+        }
+
+        private void menu_down(object sender, MouseButtonEventArgs e)
+        {
+            if (menu) 
+            { 
+                menu=false;
+                RotateButton_Click();
+                DoubleAnimation withmenu = new DoubleAnimation
+                {
+                    From = 1280,                // Chiều rộng ban đầu
+                    To = 1188.89,  // Chiều rộng kết thúc (trở về chiều rộng ban đầu của MyRectangle1)
+                    Duration = new Duration(TimeSpan.FromSeconds(0.2)), // Thời gian thay đổi
+                    RepeatBehavior = new RepeatBehavior(1)             // Số lần lặp
+                };
+                man_hinh_den.BeginAnimation(WidthProperty, withmenu);  // Thực thi trên Border menu_trang
+                man_hinh_trang.BeginAnimation(WidthProperty, withmenu);
+                enter("man_hinh_den", "man_hinh_trang");
+            }
+            else 
+            { 
+                menu=true;
+                ReverseRotateButton_Click();
+                
+                DoubleAnimation withmenu = new DoubleAnimation
+                {
+                    From = 1188.89,                // Chiều rộng ban đầu
+                    To = 1280,  // Chiều rộng kết thúc (trở về chiều rộng ban đầu của MyRectangle1)
+                    Duration = new Duration(TimeSpan.FromSeconds(0.2)), // Thời gian thay đổi
+                    RepeatBehavior = new RepeatBehavior(1)             // Số lần lặp
+                };
+                man_hinh_den.BeginAnimation(WidthProperty, withmenu);  // Thực thi trên Border menu_trang
+                man_hinh_trang.BeginAnimation(WidthProperty, withmenu);
+                leave("man_hinh_den", "man_hinh_trang");
+
+            }
+            
+
+
+        }
     }
 }

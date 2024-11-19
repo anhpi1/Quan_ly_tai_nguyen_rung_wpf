@@ -6,44 +6,33 @@
         xmlns:local="clr-namespace:Quan_ly_tai_nguyen_rung_wpf"
         mc:Ignorable="d"
         Title="man_hinh_menu"
-        Height="720"
-        Width="1280">
+        Height="800"
+        Width="1320">
     <Grid Background="#E8E8E8">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>
-        <Grid Grid.Row="1"
-              Grid.Column="0"
-              Grid.RowSpan="6"
-              Grid.ColumnSpan="1"
-              Background="Aqua">
+
+        <Grid Background="#E8E8E8"
+              Height="720"
+              Width="1280">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
@@ -52,258 +41,413 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
-            <Border x:Name="home_trang"
-                    Background="#E8E8E8"
+            <Grid Grid.Row="1"
+                  Grid.Column="0"
+                  Grid.RowSpan="6"
+                  Grid.ColumnSpan="1"
+                  HorizontalAlignment="Stretch"
+                  VerticalAlignment="Stretch">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Border x:Name="home_trang"
+                        Background="#E8E8E8"
+                        Style="{StaticResource hieu_ung_bong_trang}"
+                        CornerRadius="5"
+                        Height="50"
+                        Width="50"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Grid.RowSpan="1"
+                        Grid.ColumnSpan="1"></Border>
+                <Border x:Name="home_den"
+                        Background="#E8E8E8"
+                        Style="{StaticResource hieu_ung_bong_den}"
+                        CornerRadius="5"
+                        Height="50"
+                        Width="50"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Grid.RowSpan="1"
+                        Grid.ColumnSpan="1"
+                        MouseEnter="home_enter"
+                        MouseLeave="home_leave"
+                        MouseLeftButtonDown="home_down">
+                    <Image Name="home_png"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center">
+                        <Image.Source>
+                            <BitmapImage UriSource="png/home_1.png" />
+                        </Image.Source>
+                    </Image>
+                </Border>
+                <Border x:Name="hanh_chinh_trang"
+                        Background="#E8E8E8"
+                        Style="{StaticResource hieu_ung_bong_trang}"
+                        CornerRadius="5"
+                        Height="50"
+                        Width="50"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Grid.RowSpan="1"
+                        Grid.ColumnSpan="1"></Border>
+                <Border x:Name="hanh_chinh_den"
+                        Background="#E8E8E8"
+                        Style="{StaticResource hieu_ung_bong_den}"
+                        CornerRadius="5"
+                        Height="50"
+                        Width="50"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Grid.RowSpan="1"
+                        Grid.ColumnSpan="1"
+                        MouseEnter="hanh_chinh_enter"
+                        MouseLeave="hanh_chinh_leave"
+                        MouseLeftButtonDown="hanh_chinh_down">
+                    <Image Name="hanh_chinh_png"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center">
+                        <Image.Source>
+                            <BitmapImage UriSource="png/hanh_chinh_1.png" />
+                        </Image.Source>
+                    </Image>
+                </Border>
+                <Border x:Name="hat_cay_trang"
+                        Background="#E8E8E8"
+                        Style="{StaticResource hieu_ung_bong_trang}"
+                        CornerRadius="5"
+                        Height="50"
+                        Width="50"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Grid.RowSpan="1"
+                        Grid.ColumnSpan="1"></Border>
+                <Border x:Name="hat_cay_den"
+                        Background="#E8E8E8"
+                        Style="{StaticResource hieu_ung_bong_den}"
+                        CornerRadius="5"
+                        Height="50"
+                        Width="50"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Grid.RowSpan="1"
+                        Grid.ColumnSpan="1"
+                        MouseEnter="hat_cay_enter"
+                        MouseLeave="hat_cay_leave"
+                        MouseLeftButtonDown="hat_cay_down">
+                    <Image Name="hat_cay_png"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center">
+                        <Image.Source>
+                            <BitmapImage UriSource="png/hat_cay_1.png" />
+                        </Image.Source>
+                    </Image>
+                </Border>
+                <Border x:Name="go_trang"
+                        Background="#E8E8E8"
+                        Style="{StaticResource hieu_ung_bong_trang}"
+                        CornerRadius="5"
+                        Height="50"
+                        Width="50"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        Grid.RowSpan="1"
+                        Grid.ColumnSpan="1"></Border>
+                <Border x:Name="go_den"
+                        Background="#E8E8E8"
+                        Style="{StaticResource hieu_ung_bong_den}"
+                        CornerRadius="5"
+                        Height="50"
+                        Width="50"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        Grid.RowSpan="1"
+                        Grid.ColumnSpan="1"
+                        MouseEnter="go_enter"
+                        MouseLeave="go_leave"
+                        MouseLeftButtonDown="go_down">
+                    <Image Name="go_png"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center">
+                        <Image.Source>
+                            <BitmapImage UriSource="png/go_1.png" />
+                        </Image.Source>
+                    </Image>
+                </Border>
+                <Border x:Name="dong_vat_trang"
+                        Background="#E8E8E8"
+                        Style="{StaticResource hieu_ung_bong_trang}"
+                        CornerRadius="5"
+                        Height="50"
+                        Width="50"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Grid.Row="4"
+                        Grid.Column="0"
+                        Grid.RowSpan="1"
+                        Grid.ColumnSpan="1"></Border>
+                <Border x:Name="dong_vat_den"
+                        Background="#E8E8E8"
+                        Style="{StaticResource hieu_ung_bong_den}"
+                        CornerRadius="5"
+                        Height="50"
+                        Width="50"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Grid.Row="4"
+                        Grid.Column="0"
+                        Grid.RowSpan="1"
+                        Grid.ColumnSpan="1"
+                        MouseEnter="dong_vat_enter"
+                        MouseLeave="dong_vat_leave"
+                        MouseLeftButtonDown="dong_vat_down">
+                    <Image Name="dong_vat_png"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center">
+                        <Image.Source>
+                            <BitmapImage UriSource="png/dong_vat_1.png" />
+                        </Image.Source>
+                    </Image>
+                </Border>
+                <Border x:Name="ban_do_trang"
+                        Background="#E8E8E8"
+                        Style="{StaticResource hieu_ung_bong_trang}"
+                        CornerRadius="5"
+                        Height="50"
+                        Width="50"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Grid.Row="5"
+                        Grid.Column="0"
+                        Grid.RowSpan="1"
+                        Grid.ColumnSpan="1"></Border>
+                <Border x:Name="ban_do_den"
+                        Background="#E8E8E8"
+                        Style="{StaticResource hieu_ung_bong_den}"
+                        CornerRadius="5"
+                        Height="50"
+                        Width="50"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Grid.Row="5"
+                        Grid.Column="0"
+                        Grid.RowSpan="1"
+                        Grid.ColumnSpan="1"
+                        MouseEnter="ban_do_enter"
+                        MouseLeave="ban_do_leave"
+                        MouseLeftButtonDown="ban_do_down">
+                    <Image Name="ban_do_png"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center">
+                        <Image.Source>
+                            <BitmapImage UriSource="png/ban_do_1.png" />
+                        </Image.Source>
+                    </Image>
+                </Border>
+                <Border x:Name="he_thong_trang"
+                        Background="#E8E8E8"
+                        Style="{StaticResource hieu_ung_bong_trang}"
+                        CornerRadius="5"
+                        Height="50"
+                        Width="50"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Grid.Row="6"
+                        Grid.Column="0"
+                        Grid.RowSpan="1"
+                        Grid.ColumnSpan="1"></Border>
+                <Border x:Name="he_thong_den"
+                        Background="#E8E8E8"
+                        Style="{StaticResource hieu_ung_bong_den}"
+                        CornerRadius="5"
+                        Height="50"
+                        Width="50"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Grid.Row="6"
+                        Grid.Column="0"
+                        Grid.RowSpan="1"
+                        Grid.ColumnSpan="1"
+                        MouseEnter="he_thong_enter"
+                        MouseLeave="he_thong_leave"
+                        MouseLeftButtonDown="he_thong_down">
+                    <Image Name="he_thong_png"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center">
+                        <Image.Source>
+                            <BitmapImage UriSource="png/he_thong_1.png" />
+                        </Image.Source>
+                    </Image>
+                </Border>
+
+            </Grid>
+            <Border x:Name="man_hinh_trang"
                     Style="{StaticResource hieu_ung_bong_trang}"
+                    Background="#E8E8E8"
                     CornerRadius="5"
-                    Height="50"
-                    Width="50"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Right"
+                    Height="700"
+                    Width="1280"
                     Grid.Row="0"
                     Grid.Column="0"
-                    Grid.RowSpan="1"
-                    Grid.ColumnSpan="1"></Border>
-            <Border x:Name="home_den"
-                    Background="#E8E8E8"
+                    Grid.RowSpan="8"
+                    Grid.ColumnSpan="18"></Border>
+            <Border x:Name="man_hinh_den"
                     Style="{StaticResource hieu_ung_bong_den}"
+                    Background="#E8E8E8"
+                    
                     CornerRadius="5"
-                    Height="50"
-                    Width="50"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Right"
+                    Height="700"
+                    Width="1280"
                     Grid.Row="0"
                     Grid.Column="0"
-                    Grid.RowSpan="1"
-                    Grid.ColumnSpan="1"
-                    MouseEnter="home_enter"
-                    MouseLeave="home_leave"
-                    MouseLeftButtonDown="home_down">
-                <Image Name="home_png"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center">
-                    <Image.Source>
-                        <BitmapImage UriSource="png/home_1.png" />
-                    </Image.Source>
-                </Image>
-            </Border>
-            <Border x:Name="hanh_chinh_trang"
-                    Background="#E8E8E8"
-                    Style="{StaticResource hieu_ung_bong_trang}"
-                    CornerRadius="5"
-                    Height="50"
-                    Width="50"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Grid.Row="1"
-                    Grid.Column="0"
-                    Grid.RowSpan="1"
-                    Grid.ColumnSpan="1"></Border>
-            <Border x:Name="hanh_chinh_den"
-                    Background="#E8E8E8"
-                    Style="{StaticResource hieu_ung_bong_den}"
-                    CornerRadius="5"
-                    Height="50"
-                    Width="50"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Grid.Row="1"
-                    Grid.Column="0"
-                    Grid.RowSpan="1"
-                    Grid.ColumnSpan="1"
-                    MouseEnter="hanh_chinh_enter"
-                    MouseLeave="hanh_chinh_leave"
-                    MouseLeftButtonDown="hanh_chinh_down">
-                <Image Name="hanh_chinh_png"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center">
-                    <Image.Source>
-                        <BitmapImage UriSource="png/hanh_chinh_1.png" />
-                    </Image.Source>
-                </Image>
-            </Border>
-            <Border x:Name="hat_cay_trang"
-                    Background="#E8E8E8"
-                    Style="{StaticResource hieu_ung_bong_trang}"
-                    CornerRadius="5"
-                    Height="50"
-                    Width="50"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Grid.Row="2"
-                    Grid.Column="0"
-                    Grid.RowSpan="1"
-                    Grid.ColumnSpan="1"></Border>
-            <Border x:Name="hat_cay_den"
-                    Background="#E8E8E8"
-                    Style="{StaticResource hieu_ung_bong_den}"
-                    CornerRadius="5"
-                    Height="50"
-                    Width="50"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Grid.Row="2"
-                    Grid.Column="0"
-                    Grid.RowSpan="1"
-                    Grid.ColumnSpan="1"
-                    MouseEnter="hat_cay_enter"
-                    MouseLeave="hat_cay_leave"
-                    MouseLeftButtonDown="hat_cay_down">
-                <Image Name="hat_cay_png"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center">
-                    <Image.Source>
-                        <BitmapImage UriSource="png/hat_cay_1.png" />
-                    </Image.Source>
-                </Image>
-            </Border>
-            <Border x:Name="go_trang"
-                    Background="#E8E8E8"
-                    Style="{StaticResource hieu_ung_bong_trang}"
-                    CornerRadius="5"
-                    Height="50"
-                    Width="50"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Grid.Row="3"
-                    Grid.Column="0"
-                    Grid.RowSpan="1"
-                    Grid.ColumnSpan="1"></Border>
-            <Border x:Name="go_den"
-                    Background="#E8E8E8"
-                    Style="{StaticResource hieu_ung_bong_den}"
-                    CornerRadius="5"
-                    Height="50"
-                    Width="50"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Grid.Row="3"
-                    Grid.Column="0"
-                    Grid.RowSpan="1"
-                    Grid.ColumnSpan="1"
-                    MouseEnter="go_enter"
-                    MouseLeave="go_leave"
-                    MouseLeftButtonDown="go_down">
-                <Image Name="go_png"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center">
-                    <Image.Source>
-                        <BitmapImage UriSource="png/go_1.png" />
-                    </Image.Source>
-                </Image>
-            </Border>
-            <Border x:Name="dong_vat_trang"
-                    Background="#E8E8E8"
-                    Style="{StaticResource hieu_ung_bong_trang}"
-                    CornerRadius="5"
-                    Height="50"
-                    Width="50"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Grid.Row="4"
-                    Grid.Column="0"
-                    Grid.RowSpan="1"
-                    Grid.ColumnSpan="1"></Border>
-            <Border x:Name="dong_vat_den"
-                    Background="#E8E8E8"
-                    Style="{StaticResource hieu_ung_bong_den}"
-                    CornerRadius="5"
-                    Height="50"
-                    Width="50"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Grid.Row="4"
-                    Grid.Column="0"
-                    Grid.RowSpan="1"
-                    Grid.ColumnSpan="1"
-                    MouseEnter="dong_vat_enter"
-                    MouseLeave="dong_vat_leave"
-                    MouseLeftButtonDown="dong_vat_down">
-                <Image Name="dong_vat_png"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center">
-                    <Image.Source>
-                        <BitmapImage UriSource="png/dong_vat_1.png" />
-                    </Image.Source>
-                </Image>
-            </Border>
-            <Border x:Name="ban_do_trang"
-                    Background="#E8E8E8"
-                    Style="{StaticResource hieu_ung_bong_trang}"
-                    CornerRadius="5"
-                    Height="50"
-                    Width="50"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Grid.Row="5"
-                    Grid.Column="0"
-                    Grid.RowSpan="1"
-                    Grid.ColumnSpan="1"></Border>
-            <Border x:Name="ban_do_den"
-                    Background="#E8E8E8"
-                    Style="{StaticResource hieu_ung_bong_den}"
-                    CornerRadius="5"
-                    Height="50"
-                    Width="50"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Grid.Row="5"
-                    Grid.Column="0"
-                    Grid.RowSpan="1"
-                    Grid.ColumnSpan="1"
-                    MouseEnter="ban_do_enter"
-                    MouseLeave="ban_do_leave"
-                    MouseLeftButtonDown="ban_do_down">
-                <Image Name="ban_do_png"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center">
-                    <Image.Source>
-                        <BitmapImage UriSource="png/ban_do_1.png" />
-                    </Image.Source>
-                </Image>
-            </Border>
-            <Border x:Name="he_thong_trang"
-                    Background="#E8E8E8"
-                    Style="{StaticResource hieu_ung_bong_trang}"
-                    CornerRadius="5"
-                    Height="50"
-                    Width="50"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Grid.Row="6"
-                    Grid.Column="0"
-                    Grid.RowSpan="1"
-                    Grid.ColumnSpan="1"></Border>
-            <Border x:Name="he_thong_den"
-                    Background="#E8E8E8"
-                    Style="{StaticResource hieu_ung_bong_den}"
-                    CornerRadius="5"
-                    Height="50"
-                    Width="50"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Grid.Row="6"
-                    Grid.Column="0"
-                    Grid.RowSpan="1"
-                    Grid.ColumnSpan="1"
-                    MouseEnter="he_thong_enter"
-                    MouseLeave="he_thong_leave"
-                    MouseLeftButtonDown="he_thong_down">
-                <Image Name="he_thong_png"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center">
-                    <Image.Source>
-                        <BitmapImage UriSource="png/he_thong_1.png" />
-                    </Image.Source>
-                </Image>
+                    Grid.RowSpan="8"
+                    Grid.ColumnSpan="18">
+                <Grid>
+                    <ContentControl x:Name="noi_dung"
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    Grid.RowSpan="8"
+                                    Grid.ColumnSpan="17">
+
+                    </ContentControl>
+                    <Border x:Name="menu_trang"
+                            Margin="15"
+                            Background="#E8E8E8"
+                            Style="{StaticResource hieu_ung_bong_trang}"
+                            CornerRadius="5"
+                            Height="50"
+                            Width="50"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Grid.RowSpan="8"
+                            Grid.ColumnSpan="17"></Border>
+                    <Border x:Name="menu_den"
+                            Margin="10"
+                            Background="#E8E8E8"
+                            Style="{StaticResource hieu_ung_bong_den}"
+                            CornerRadius="5"
+                            Height="50"
+                            Width="50"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Grid.RowSpan="8"
+                            Grid.ColumnSpan="17"
+                            MouseEnter="menu_enter"
+                            MouseLeave="menu_leave"
+                            MouseLeftButtonDown="menu_down">
+                        <Grid Height="50"
+                              Width="70">
+                            <Rectangle x:Name="MyRectangle1"
+                                       Margin="5"
+                                       Width="40"
+                                       Height="6"
+                                       RadiusX="3"
+                                       RadiusY="3"
+                                       HorizontalAlignment="Left"
+                                       VerticalAlignment="Top">
+                                <Rectangle.Fill>
+                                    <LinearGradientBrush StartPoint="0,0"
+                                                         EndPoint="1,1">
+                                        <GradientStop Color="#af40ff"
+                                                      Offset="0.0" />
+                                        <GradientStop Color="#5b42f3"
+                                                      Offset="1.0" />
+                                    </LinearGradientBrush>
+                                </Rectangle.Fill>
+                                <Rectangle.RenderTransform>
+                                    <!-- Transform dùng để xoay -->
+                                    <RotateTransform x:Name="RectangleRotateTransform1"
+                                                     CenterX="3"
+                                                     CenterY="3" />
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+
+                            <Rectangle x:Name="MyRectangle2"
+                                       Margin=" 5 22"
+                                       Width="40"
+                                       Height="6"
+                                       RadiusX="3"
+                                       RadiusY="3"
+                                       HorizontalAlignment="Left"
+                                       VerticalAlignment="center">
+                                <Rectangle.Fill>
+                                    <LinearGradientBrush StartPoint="0,0"
+                                                         EndPoint="1,1">
+                                        <GradientStop Color="#af40ff"
+                                                      Offset="0.0" />
+                                        <GradientStop Color="#5b42f3"
+                                                      Offset="1.0" />
+                                    </LinearGradientBrush>
+                                </Rectangle.Fill>
+                                <Rectangle.RenderTransform>
+                                    <!-- Transform dùng để xoay -->
+                                    <RotateTransform x:Name="RectangleRotateTransform2"
+                                                     CenterX="3"
+                                                     CenterY="3" />
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                            <Rectangle x:Name="MyRectangle3"
+                                       Margin=" 5"
+                                       Width="40"
+                                       Height="6"
+                                       RadiusX="3"
+                                       RadiusY="3"
+                                       HorizontalAlignment="Left"
+                                       VerticalAlignment="Bottom">
+                                <Rectangle.Fill>
+                                    <LinearGradientBrush StartPoint="0,0"
+                                                         EndPoint="1,1">
+                                        <GradientStop Color="#af40ff"
+                                                      Offset="0.0" />
+                                        <GradientStop Color="#5b42f3"
+                                                      Offset="1.0" />
+                                    </LinearGradientBrush>
+                                </Rectangle.Fill>
+                                <Rectangle.RenderTransform>
+                                    <!-- Transform dùng để xoay -->
+                                    <RotateTransform x:Name="RectangleRotateTransform3"
+                                                     CenterX="3"
+                                                     CenterY="3" />
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+
+                        </Grid>
+                    </Border>
+                </Grid>
             </Border>
 
         </Grid>
-        <ContentControl x:Name="noi_dung"
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        Grid.RowSpan="8"
-                        Grid.ColumnSpan="17"></ContentControl>
     </Grid>
 </Window>
