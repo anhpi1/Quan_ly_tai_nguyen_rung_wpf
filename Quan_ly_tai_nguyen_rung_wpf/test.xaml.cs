@@ -24,11 +24,17 @@ namespace Quan_ly_tai_nguyen_rung_wpf
         public test()
         {
             InitializeComponent();
+<<<<<<< Updated upstream
            
+=======
+            var myCtrl = new test1();
+            main.Content = myCtrl;
+>>>>>>> Stashed changes
         }
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
+<<<<<<< Updated upstream
             // Hiển thị noi_dung1 và ẩn noi_dung2
             noi_dung1.Visibility = Visibility.Visible;
             noi_dung2.Visibility = Visibility.Collapsed;
@@ -42,5 +48,22 @@ namespace Quan_ly_tai_nguyen_rung_wpf
         }
 
  
+=======
+            var myCtrl = new ctrl_dong_vat();
+            main.Content = myCtrl;
+        }
+
+        private void btn_main1_Click(object sender, RoutedEventArgs e)
+        {
+            var myCtrl = new test2();
+            main.Content = myCtrl;
+        }
+
+        //private void btn_main_Click(object sender, RoutedEventArgs e)
+        //{
+        //    var myCtrl = ctrl_hanh_chinh;
+        //    main
+        //}
+>>>>>>> Stashed changes
     }
 }

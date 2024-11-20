@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Quan_ly_tai_nguyen_rung_wpf")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< Updated upstream
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+387d9575299b426808e3ff437e111fcf94fd9412")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5e164a3193eeb43a227ba129a4a3497f9a739cec")]
+>>>>>>> Stashed changes
 [assembly: System.Reflection.AssemblyProductAttribute("Quan_ly_tai_nguyen_rung_wpf")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Quan_ly_tai_nguyen_rung_wpf")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

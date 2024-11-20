@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Quan_ly_tai_nguyen_rung_wpf"
         mc:Ignorable="d"
         Title="test" Height="450" Width="800">
+<<<<<<< Updated upstream
     <StackPanel>
         <Button x:Name="btn1"
                 Click="btn1_Click"
@@ -16,4 +17,27 @@
         <TextBlock Visibility="Collapsed" x:Name="noi_dung1">noi dung 1</TextBlock>
         <TextBlock Visibility="Collapsed" x:Name="noi_dung2">noi dung 2</TextBlock>
     </StackPanel>
+=======
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button x:Name="btn_main"
+                Click="btn_main_Click">btn1</Button>
+        <ContentControl x:Name="main"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="1"
+                        Grid.RowSpan="2"></ContentControl>
+        <Button x:Name="btn_main1"
+                Grid.Row="1" Click="btn_main1_Click"
+        >btn2</Button>
+
+    </Grid>
+>>>>>>> Stashed changes
 </Window>

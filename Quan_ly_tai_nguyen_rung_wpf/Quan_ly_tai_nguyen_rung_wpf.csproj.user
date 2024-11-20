@@ -19,13 +19,13 @@
     <Compile Update="ctrl_dang_nhap.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ctrl_dong_vat.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ctrl_lay_lai_mat_khau_thanh_cong.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="ctrl_quen_mat_khau.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="ctrl_test.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="man_hinh_dang_nhap.xaml.cs">
@@ -35,6 +35,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="test.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="test1.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="test2.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -54,13 +60,13 @@
     <Page Update="ctrl_dang_nhap.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="ctrl_dong_vat.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="ctrl_lay_lai_mat_khau_thanh_cong.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ctrl_quen_mat_khau.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="ctrl_test.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
@@ -73,6 +79,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="test.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="test1.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="test2.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
