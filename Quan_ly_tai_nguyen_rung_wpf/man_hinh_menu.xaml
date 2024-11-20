@@ -606,13 +606,10 @@
                                 Background="White"
                                 Style="{StaticResource hieu_ung_bong_den}"
                                 CornerRadius="25"
-                                
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center"
-                                Grid.Column="1"
-                                MouseEnter="menu_nguoi_dung_enter"
-                                MouseLeave="menu_nguoi_dung_leave"
-                                MouseLeftButtonDown="menu_nguoi_dung_down">
+                                Grid.Column="1">
+
                             <ListBox x:Name="list_nguoi_dung"
                                      BorderBrush="Transparent"
                                      Background="Transparent"
