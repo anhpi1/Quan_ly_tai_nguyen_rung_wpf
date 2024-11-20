@@ -31,6 +31,12 @@
     <None Remove="png\home_1.png" />
     <None Remove="png\home_2.png" />
     <None Remove="png\home_3.png" />
+    <None Remove="png\nguoi_dung_1.png" />
+    <None Remove="png\nguoi_dung_2.png" />
+    <None Remove="png\nguoi_dung_3.png" />
+    <None Remove="png\seach_1.png" />
+    <None Remove="png\seach_2.png" />
+    <None Remove="png\seach_3.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -98,6 +104,24 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="png\home_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="png\nguoi_dung_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="png\nguoi_dung_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="png\nguoi_dung_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="png\seach_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="png\seach_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="png\seach_3.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

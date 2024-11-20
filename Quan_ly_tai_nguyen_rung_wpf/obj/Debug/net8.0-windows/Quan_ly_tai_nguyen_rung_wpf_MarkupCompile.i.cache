@@ -9,12 +9,21 @@ Quan_ly_tai_nguyen_rung_wpf
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
+<<<<<<< HEAD
 D:\github\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\App.xaml
 132057741428
 222042280545
 18999866402
 2102101378733
 AppStyles.xaml;ctrl_dang_ki_1.xaml;ctrl_dang_ki_2.xaml;ctrl_dang_ki_thanh_cong.xaml;ctrl_dang_nhap.xaml;ctrl_dong_vat.xaml;ctrl_lay_lai_mat_khau_thanh_cong.xaml;ctrl_quen_mat_khau.xaml;MainWindow.xaml;man_hinh_dang_nhap.xaml;man_hinh_menu.xaml;test1.xaml;test2.xaml;
+=======
+C:\Users\k\Documents\GitHub\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\App.xaml
+12-1082681650
+28-809398065
+16337117308
+2101332999192
+AppStyles.xaml;ctrl_dang_ki_1.xaml;ctrl_dang_ki_2.xaml;ctrl_dang_ki_thanh_cong.xaml;ctrl_dang_nhap.xaml;ctrl_lay_lai_mat_khau_thanh_cong.xaml;ctrl_quen_mat_khau.xaml;ctrl_test.xaml;MainWindow.xaml;man_hinh_dang_nhap.xaml;man_hinh_menu.xaml;test.xaml;
+>>>>>>> a24cc7387ab2fd482f72c2f25dcfb0b0d26c9079
 
 True
 

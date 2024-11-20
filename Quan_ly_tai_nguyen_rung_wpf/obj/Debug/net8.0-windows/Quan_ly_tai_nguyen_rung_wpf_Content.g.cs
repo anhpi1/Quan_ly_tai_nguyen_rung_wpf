@@ -30,5 +30,11 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("png/home_1.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("png/home_2.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("png/home_3.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("png/nguoi_dung_1.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("png/nguoi_dung_2.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("png/nguoi_dung_3.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("png/seach_1.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("png/seach_2.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("png/seach_3.png")]
 
 

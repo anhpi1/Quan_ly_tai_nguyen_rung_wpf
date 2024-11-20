@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Quan_ly_tai_nguyen_rung_wpf")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c0d9d75ad9fdce9dbc54cf7601df800ff2b82dd8")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79295bf4aea2a6fb65c419e5899e121124d63ebc")]
+>>>>>>> a24cc7387ab2fd482f72c2f25dcfb0b0d26c9079
 [assembly: System.Reflection.AssemblyProductAttribute("Quan_ly_tai_nguyen_rung_wpf")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Quan_ly_tai_nguyen_rung_wpf")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

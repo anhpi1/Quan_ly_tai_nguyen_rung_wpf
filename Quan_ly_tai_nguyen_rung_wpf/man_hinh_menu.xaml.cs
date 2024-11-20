@@ -14,6 +14,7 @@ using System.Windows.Media.Effects;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using static MaterialDesignThemes.Wpf.Theme;
+using static MaterialDesignThemes.Wpf.Theme.ToolBar;
 
 namespace Quan_ly_tai_nguyen_rung_wpf
 {
@@ -30,6 +31,7 @@ namespace Quan_ly_tai_nguyen_rung_wpf
         private bool ban_do = false;
         private bool he_thong = false;
         private bool menu = true;
+        private bool btn_nguoi_dung = false;
         public man_hinh_menu()
         {
             InitializeComponent();
@@ -725,6 +727,73 @@ namespace Quan_ly_tai_nguyen_rung_wpf
             doi_anh("ban_do_png", "png/ban_do_1.png");
             doi_anh("he_thong_png", "png/he_thong_3.png");
         }
+        private void btn_seach_enter(object sender, MouseEventArgs e)
+        {
+            enter("btn_seach_den", "btn_seach_trang");
+            doi_anh("btn_seach_png", "png/seach_2.png");
+        }
+
+        private void btn_seach_leave(object sender, MouseEventArgs e)
+        {
+            if (true)
+            {
+                leave("btn_seach_den", "btn_seach_trang");
+                doi_anh("btn_seach_png", "png/seach_1.png");
+            }
+            else
+            {
+                leave("btn_seach_den", "btn_seach_trang");
+                doi_anh("btn_seach_png", "png/seach_1.png");
+            }
+
+        }
+
+        private void btn_seach_down(object sender, MouseButtonEventArgs e)
+        {
+            
+            
+            doi_anh("btn_seach_png", "png/seach_3.png");
+            doi_anh("btn_seach_dung_png", "png/seach_3.png");
+            
+        }
+        private void btn_nguoi_dung_enter(object sender, MouseEventArgs e)
+        {
+            enter("btn_nguoi_dung_den", "btn_nguoi_dung_trang");
+            doi_anh("btn_nguoi_dung_png", "png/nguoi_dung_2.png");
+        }
+
+        private void btn_nguoi_dung_leave(object sender, MouseEventArgs e)
+        {
+            if (btn_nguoi_dung)
+            {
+                leave("btn_nguoi_dung_den", "btn_nguoi_dung_trang");
+                doi_anh("btn_nguoi_dung_png", "png/nguoi_dung_3.png");
+            }
+            else
+            {
+                leave("btn_nguoi_dung_den", "btn_nguoi_dung_trang");
+                doi_anh("btn_nguoi_dung_png", "png/nguoi_dung_1.png");
+            }
+
+        }
+        
+        private void btn_nguoi_dung_down(object sender, MouseButtonEventArgs e)
+        {
+            if (btn_nguoi_dung)
+            {
+                btn_nguoi_dung = false;
+            }
+            else
+            {
+                btn_nguoi_dung = true;
+            }
+            
+
+            doi_anh("btn_nguoi_dung_png", "png/nguoi_dung_3.png");
+            doi_anh("btn_nguoi_dung_png", "png/nguoi_dung_3.png");
+
+        }
+
         private void menu_enter(object sender, MouseEventArgs e)
         {
             enter("menu_den", "menu_trang");
@@ -783,6 +852,88 @@ namespace Quan_ly_tai_nguyen_rung_wpf
             
 
 
+        }
+
+        //////////// seach box
+        private readonly List<string> items = new List<string> { "con ca", "con cho", "con meo" };
+        private void SearchBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string input = SearchBox.Text.ToLower();
+
+            // Nếu không có từ khóa, ẩn danh sách gợi ý
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                SuggestionList.Visibility = Visibility.Collapsed;
+                SuggestionList.ItemsSource = null;
+                return;
+            }
+
+            // Tìm kiếm gợi ý
+            var suggestions = items.Where(item => item.Contains(input)).ToList();
+
+            if (suggestions.Any())
+            {
+                SuggestionList.ItemsSource = suggestions;
+                SuggestionList.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                SuggestionList.Visibility = Visibility.Collapsed;
+                SuggestionList.ItemsSource = null;
+            }
+        }
+
+        private void SuggestionList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (SuggestionList.SelectedItem is string selected)
+            {
+                // Đưa từ gợi ý vào TextBox
+                SearchBox.Text = selected;
+
+                // Ẩn danh sách gợi ý
+                SuggestionList.Visibility = Visibility.Collapsed;
+
+                // Đưa con trỏ về cuối TextBox
+                SearchBox.CaretIndex = SearchBox.Text.Length;
+            }
+        }
+
+        private void SearchBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                // Xử lý nếu danh sách gợi ý có ít nhất một mục
+                if (SuggestionList.Items.Count > 0)
+                {
+                    SuggestionList.SelectedIndex = 0; // Chọn mục đầu tiên
+                    var firstItem = SuggestionList.SelectedItem?.ToString();
+
+                    if (firstItem != null)
+                    {
+                        SearchBox.Text = firstItem; // Đưa vào TextBox
+                        SuggestionList.Visibility = Visibility.Collapsed;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show($"No results found for: {SearchBox.Text}", "Search", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+            }
+        }
+
+        private void SearchButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Hiển thị kết quả tìm kiếm
+            string keyword = SearchBox.Text;
+
+            if (!string.IsNullOrWhiteSpace(keyword))
+            {
+                MessageBox.Show($"Searching for: {keyword}", "Search", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show("Please enter a search term.", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
         }
     }
 }

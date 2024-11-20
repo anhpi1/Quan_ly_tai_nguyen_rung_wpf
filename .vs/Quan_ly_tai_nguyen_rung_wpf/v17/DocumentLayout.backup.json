@@ -3,6 +3,7 @@
   "WorkspaceRootPath": "D:\\github\\Quan_ly_tai_nguyen_rung_wpf\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
@@ -44,6 +45,22 @@
     {
       "AbsoluteMoniker": "D:0:0:{0D3240FA-7A07-48BC-95D1-4D52AFDF5B57}|Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf.csproj|d:\\github\\quan_ly_tai_nguyen_rung_wpf\\quan_ly_tai_nguyen_rung_wpf\\appstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{0D3240FA-7A07-48BC-95D1-4D52AFDF5B57}|Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf.csproj|solutionrelative:quan_ly_tai_nguyen_rung_wpf\\appstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+=======
+      "AbsoluteMoniker": "D:0:0:{0D3240FA-7A07-48BC-95D1-4D52AFDF5B57}|Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf.csproj|c:\\users\\k\\documents\\github\\quan_ly_tai_nguyen_rung_wpf\\quan_ly_tai_nguyen_rung_wpf\\man_hinh_menu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0D3240FA-7A07-48BC-95D1-4D52AFDF5B57}|Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf.csproj|solutionrelative:quan_ly_tai_nguyen_rung_wpf\\man_hinh_menu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D3240FA-7A07-48BC-95D1-4D52AFDF5B57}|Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf.csproj|c:\\users\\k\\documents\\github\\quan_ly_tai_nguyen_rung_wpf\\quan_ly_tai_nguyen_rung_wpf\\test.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0D3240FA-7A07-48BC-95D1-4D52AFDF5B57}|Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf.csproj|solutionrelative:quan_ly_tai_nguyen_rung_wpf\\test.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D3240FA-7A07-48BC-95D1-4D52AFDF5B57}|Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf.csproj|c:\\users\\k\\documents\\github\\quan_ly_tai_nguyen_rung_wpf\\quan_ly_tai_nguyen_rung_wpf\\ctrl_test.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0D3240FA-7A07-48BC-95D1-4D52AFDF5B57}|Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf.csproj|solutionrelative:quan_ly_tai_nguyen_rung_wpf\\ctrl_test.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D3240FA-7A07-48BC-95D1-4D52AFDF5B57}|Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf.csproj|c:\\users\\k\\documents\\github\\quan_ly_tai_nguyen_rung_wpf\\quan_ly_tai_nguyen_rung_wpf\\man_hinh_menu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D3240FA-7A07-48BC-95D1-4D52AFDF5B57}|Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf.csproj|solutionrelative:quan_ly_tai_nguyen_rung_wpf\\man_hinh_menu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> a24cc7387ab2fd482f72c2f25dcfb0b0d26c9079
     }
   ],
   "DocumentGroupContainers": [
@@ -56,6 +73,7 @@
           "SelectedChildIndex": 0,
           "Children": [
             {
+<<<<<<< HEAD
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Microsoft.Common.CurrentVersion.targets",
@@ -93,11 +111,14 @@
               "EditorCaption": ""
             },
             {
+=======
+>>>>>>> a24cc7387ab2fd482f72c2f25dcfb0b0d26c9079
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 4,
               "Title": "ctrl_dong_vat.xaml.cs",
               "DocumentMoniker": "D:\\github\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf\\ctrl_dong_vat.xaml.cs",
@@ -107,10 +128,33 @@
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-20T09:48:27.707Z",
+=======
+              "DocumentIndex": 1,
+              "Title": "test.xaml",
+              "DocumentMoniker": "C:\\Users\\k\\Documents\\GitHub\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf\\test.xaml",
+              "RelativeDocumentMoniker": "Quan_ly_tai_nguyen_rung_wpf\\test.xaml",
+              "ToolTip": "C:\\Users\\k\\Documents\\GitHub\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf\\test.xaml",
+              "RelativeToolTip": "Quan_ly_tai_nguyen_rung_wpf\\test.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-20T09:53:08.583Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ctrl_test.xaml",
+              "DocumentMoniker": "C:\\Users\\k\\Documents\\GitHub\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf\\ctrl_test.xaml",
+              "RelativeDocumentMoniker": "Quan_ly_tai_nguyen_rung_wpf\\ctrl_test.xaml",
+              "ToolTip": "C:\\Users\\k\\Documents\\GitHub\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf\\ctrl_test.xaml",
+              "RelativeToolTip": "Quan_ly_tai_nguyen_rung_wpf\\ctrl_test.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-20T09:53:00.448Z",
+>>>>>>> a24cc7387ab2fd482f72c2f25dcfb0b0d26c9079
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 6,
               "Title": "test2.xaml",
               "DocumentMoniker": "D:\\github\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf\\test2.xaml",
@@ -119,11 +163,22 @@
               "RelativeToolTip": "Quan_ly_tai_nguyen_rung_wpf\\test2.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-11-20T09:46:21.781Z",
+=======
+              "DocumentIndex": 0,
+              "Title": "man_hinh_menu.xaml",
+              "DocumentMoniker": "C:\\Users\\k\\Documents\\GitHub\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf\\man_hinh_menu.xaml",
+              "RelativeDocumentMoniker": "Quan_ly_tai_nguyen_rung_wpf\\man_hinh_menu.xaml",
+              "ToolTip": "C:\\Users\\k\\Documents\\GitHub\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf\\man_hinh_menu.xaml*",
+              "RelativeToolTip": "Quan_ly_tai_nguyen_rung_wpf\\man_hinh_menu.xaml*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-19T10:42:37.687Z",
+>>>>>>> a24cc7387ab2fd482f72c2f25dcfb0b0d26c9079
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+<<<<<<< HEAD
               "Title": "test1.xaml",
               "DocumentMoniker": "D:\\github\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf\\test1.xaml",
               "RelativeDocumentMoniker": "Quan_ly_tai_nguyen_rung_wpf\\test1.xaml",
@@ -183,12 +238,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 8,
+=======
+>>>>>>> a24cc7387ab2fd482f72c2f25dcfb0b0d26c9079
               "Title": "man_hinh_menu.xaml.cs",
               "DocumentMoniker": "D:\\github\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf\\man_hinh_menu.xaml.cs",
               "RelativeDocumentMoniker": "Quan_ly_tai_nguyen_rung_wpf\\man_hinh_menu.xaml.cs",
               "ToolTip": "D:\\github\\Quan_ly_tai_nguyen_rung_wpf\\Quan_ly_tai_nguyen_rung_wpf\\man_hinh_menu.xaml.cs",
               "RelativeToolTip": "Quan_ly_tai_nguyen_rung_wpf\\man_hinh_menu.xaml.cs",
-              "ViewState": "AgIAAOcCAAAAQGZmZmYVwAsDAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAHwDAAAA1////78nwA8DAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-20T09:44:11.162Z",
               "EditorCaption": ""
