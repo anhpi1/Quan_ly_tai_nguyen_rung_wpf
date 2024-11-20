@@ -309,7 +309,7 @@ namespace Quan_ly_tai_nguyen_rung_wpf {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Quan_ly_tai_nguyen_rung_wpf;component/man_hinh_menu.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Quan_ly_tai_nguyen_rung_wpf;V1.0.0.0;component/man_hinh_menu.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\man_hinh_menu.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
