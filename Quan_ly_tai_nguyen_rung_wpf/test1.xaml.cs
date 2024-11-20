@@ -23,6 +23,8 @@ namespace Quan_ly_tai_nguyen_rung_wpf
         public test1()
         {
             InitializeComponent();
+
+            
         }
     }
 }

@@ -154,3 +154,24 @@ D:\github\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\obj\Debug\net8
 D:\github\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\obj\Debug\net8.0-windows\test1.baml
 D:\github\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\obj\Debug\net8.0-windows\test2.baml
 >>>>>>> Stashed changes
+D:\github\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\bin\Debug\net8.0-windows\png\ban_do_1.png
+D:\github\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\bin\Debug\net8.0-windows\png\ban_do_2.png
+D:\github\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\bin\Debug\net8.0-windows\png\ban_do_3.png
+D:\github\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\bin\Debug\net8.0-windows\png\dong_vat_1.png
+D:\github\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\bin\Debug\net8.0-windows\png\dong_vat_2.png
+D:\github\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\bin\Debug\net8.0-windows\png\dong_vat_3.png
+D:\github\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\bin\Debug\net8.0-windows\png\go_1.png
+D:\github\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\bin\Debug\net8.0-windows\png\go_2.png
+D:\github\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\bin\Debug\net8.0-windows\png\go_3.png
+D:\github\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\bin\Debug\net8.0-windows\png\hanh_chinh_1.png
+D:\github\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\bin\Debug\net8.0-windows\png\hanh_chinh_2.png
+D:\github\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\bin\Debug\net8.0-windows\png\hanh_chinh_3.png
+D:\github\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\bin\Debug\net8.0-windows\png\hat_cay_1.png
+D:\github\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\bin\Debug\net8.0-windows\png\hat_cay_2.png
+D:\github\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\bin\Debug\net8.0-windows\png\hat_cay_3.png
+D:\github\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\bin\Debug\net8.0-windows\png\he_thong_1.png
+D:\github\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\bin\Debug\net8.0-windows\png\he_thong_2.png
+D:\github\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\bin\Debug\net8.0-windows\png\he_thong_3.png
+D:\github\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\bin\Debug\net8.0-windows\png\home_1.png
+D:\github\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\bin\Debug\net8.0-windows\png\home_2.png
+D:\github\Quan_ly_tai_nguyen_rung_wpf\Quan_ly_tai_nguyen_rung_wpf\bin\Debug\net8.0-windows\png\home_3.png
